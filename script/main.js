@@ -1,11 +1,9 @@
 $(window).scroll(function() {
+    //헤더 스크롤 이벤트
 	var scroll = $(window).scrollTop();
-	//console.log(scroll);
 	if (scroll >= 1) {
-		//console.log('a');
 		$("header").addClass("shadow");
 	} else {
-		//console.log('a');
 		$("header").removeClass("shadow");
 	}
 });

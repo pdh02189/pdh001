@@ -7,7 +7,40 @@
 header{position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: #fff; transition: all .2s;}
 header.shadow{box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.08);}
 header .header_inner{max-width: 1200px; height: 130px; margin: auto; display: flex; align-items: center; justify-content: space-between;}
+
 header .header_inner .header_logo{position: relative; width: 230px; height: 40px; background: url(../images/logo.png) no-repeat; background-size: cover;}
+
+header .header_inner .search_box{position: relative;}
+header .header_inner .search_box input{width: 500px; height: 50px; border: 2px solid #f95353; padding: 0 60px 0 25px; border-radius: 25px; font-size: 15px; outline: none;}
+header .header_inner .search_box .btn_search{position: absolute; top: 50%; transform: translateY(-50%); right: 0px; width: 60px; height: 50px; background: url(../images/ic_search.png) 50% 50% no-repeat; background-size: 20px; text-indent: -9999px;}
+
+header .header_inner .my_wrap{position: relative; height: 100%;}
+header .header_inner .my_wrap .top{display: flex; justify-content: flex-end; margin-top: 12px; margin-bottom: 26px;}
+header .header_inner .my_wrap .top li{margin-left: 10px; position: relative; display: flex; align-items: center;}
+header .header_inner .my_wrap .top li:not(:first-child)::before{content: ''; width: 1px; height: 10px; margin-right: 10px; background-color: #eaeaea; display: flex;}
+header .header_inner .my_wrap .top li.logout{display: none;}
+header .header_inner .my_wrap .top li a{font-size: 13px; font-weight: 600;}
+header .header_inner .my_wrap .top li.join a{color: #f95353;}
+
+/* 로그인 헤더 */
+.login .header_inner .my_wrap .top li.join,
+.login .header_inner .my_wrap .top li.login{display: none;}
+.login .header_inner .my_wrap .top li.logout{display: flex;}
+.login .header_inner .my_wrap .top li.logout::before{display: none;}
+
+header .header_inner .my_wrap .my{display: flex; justify-content: flex-end;}
+header .header_inner .my_wrap .my li:not(:first-child){margin-left: 20px;}
+header .header_inner .my_wrap .my li a{display: flex; align-items: center; justify-content: center; padding-top: 36px; width: 48px; height: 48px; background-repeat: no-repeat; background-position: center top; background-size: 26px; font-size: 11px; font-weight: 500;}
+header .header_inner .my_wrap .my li.mypage a{background-image: url(../images/ic_mypage.png);}
+header .header_inner .my_wrap .my li.cart a{background-image: url(../images/ic_cart.png);}
+header .header_inner .my_wrap .my li.delivery a{background-image: url(../images/ic_delivery.png);}
+
+header .gnb{width: 100%; height: 70px; border-top: 1px solid #e2e5eb; border-bottom: 1px solid #e2e5eb;}
+header .gnb ul{max-width: 1200px; height: 100%; margin: auto; display: flex; align-items: center; justify-content: center;}
+header .gnb ul li{position: relative; height: 100%; transition: all .2s;}
+header .gnb ul li a{display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 40px; font-size: 17px; font-weight: 600; transition: all .2s;}
+header .gnb ul li:hover::before{content: ''; display: block; position: absolute; bottom: 0; left: 50%; width: 70%; height: 2px; background-color: #f95353; transform: translateX(-50%);}
+header .gnb ul li:hover a{color: #f95353;}
 
 
 /* main */
