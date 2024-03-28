@@ -12,6 +12,18 @@
 </head>
 <body>
     <div class="wrap"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
         <header>
             <h2 class="d_none">헤더 영역</h2>
             <div class="header_inner">
@@ -49,6 +61,14 @@
                         </li>
                     </ul>
                 </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
             </div>
             <nav class="gnb">
                 <h3 class="d_none">글로벌 네비게이션 영역</h3>
@@ -70,7 +90,37 @@
                     </li>
                 </ul>
             </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="event/index.htmll" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="#" class="login btn_red">로그인</a>
+                                <a href="#" class="join btn_white">회원가입</a>
+                                <a href="#" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </header>
+        <div class="m_dim"></div>
 
         <main>
 
