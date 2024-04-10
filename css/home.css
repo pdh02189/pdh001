@@ -82,6 +82,7 @@
     .cooking_tip .tip_list li{position: relative; width: 100%; margin-right: 0px; margin-top: 20px;}
     .cooking_tip .tip_list li:nth-child(-n + 2){margin-top: 20px;}
     .cooking_tip .tip_list li:first-child{margin-top: 0;}
+    .cooking_tip .tip_list li a .list_txt .list_tit{font-size: 18px;}
 }
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
