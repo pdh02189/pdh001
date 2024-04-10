@@ -22,6 +22,13 @@ fieldset {border: 0}
 label,select,input,textarea {vertical-align: middle}
 .d_none {display: none;}
 
+.txt_cut1,.txt_cut2,.txt_cut3,.txt_cut4,.txt_cut5{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;}
+.txt_cut1{-webkit-line-clamp:1; white-space: nowrap;/* 라인수 */ display: block;}
+.txt_cut2{-webkit-line-clamp:2;/* 라인수 */ }
+.txt_cut3{-webkit-line-clamp:3;/* 라인수 */ }
+.txt_cut4{-webkit-line-clamp:4;/* 라인수 */ }
+.txt_cut5{-webkit-line-clamp:5;/* 라인수 */ }
+
 /* Chrome, Safari용 스크롤 바 */
 ::-webkit-scrollbar{width: 6px;}
 ::-webkit-scrollbar-track{background: #f0f0f0; border-radius: 5px;}
