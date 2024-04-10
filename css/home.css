@@ -5,7 +5,7 @@
 /* 공통 */
 .main_inner{max-width: 1200px; width: 100%; margin: 0 auto; display: flex; flex-wrap: wrap;}
 .main_tit{width: 100%; margin-bottom: 30px; display: flex; align-items: flex-end; flex-wrap: wrap;}
-.momuk_tit{position: relative; font-family: 'SBAggro'; color: #000; font-size: 32px;}
+.momuk_tit{position: relative; font-family: 'SBAggro'; font-weight: 600; color: #000; font-size: 32px;}
 .momuk_tit > span{font-family: inherit; font-size: inherit;}
 .btn_more{margin-left: auto; font-size: 14px; font-weight: 600;}
 .btn_more img{margin-left: 6px; transition: all .2s;}
@@ -44,7 +44,7 @@
 .cooking_tip .tip_list li a .list_txt .list_info .name{font-size: 15px; color: #000; font-weight: 500;}
 .cooking_tip .tip_list li a .list_txt .list_info .date{display: flex; align-items: center; font-size: 15px; font-weight: 400; margin-left: 8px;}
 .cooking_tip .tip_list li a .list_txt .list_info .date::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
-.cooking_tip .tip_list li a .list_txt .list_ic{width: 100%; display: flex; flex-wrap: wrap; align-items: center; margin-top: 2px;}
+.cooking_tip .tip_list li a .list_txt .list_ic{width: 100%; display: flex; flex-wrap: wrap; align-items: center; margin-top: 4px;}
 .cooking_tip .tip_list li a .list_txt .list_ic span{font-size: 14px; display: flex; align-items: center;}
 .cooking_tip .tip_list li a .list_txt .list_ic .comment{margin-left: 15px;}
 .cooking_tip .tip_list li a .list_txt .list_ic .view::before{content: ''; background: url(../images/ic_view.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
