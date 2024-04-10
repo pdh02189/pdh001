@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="script/main.js"></script>
 </head>
@@ -132,6 +133,43 @@
                 </div>
                 <div class="sub_tit">
                     <h3>로그인</h3>
+                </div>
+                <div class="login_box">
+                    <form>
+                        <div class="input_id">
+                            <input type="text" placeholder="아이디">
+                        </div>
+                        <div class="input_pw">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="id_save">
+                            <input type="checkbox" id="id_check">
+                            <label for="id_check" class="font_gray">
+                                아이디 저장
+                            </label>
+                        </div>
+                        <div class="login_btn_wrap">
+                            <button type="submit" class="btn_red">로그인</button>
+                            <button type="button" class="btn_red2">회원가입</button>
+                        </div>
+                    </form>
+
+                    <div class="sns_login">
+                        <div class="sns_login_tit">
+                            <span>SNS 계정으로 로그인</span> 
+                        </div>
+                        <ul class="sns_login_con">
+                            <li>
+                                <a href="#" class="btn_kakao"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_naver"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn_google"></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </main>

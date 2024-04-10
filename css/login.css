@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.login_box{max-width: 450px; width: 100%; margin: 0 auto;}
+.login_box .input_id,
+.login_box .input_pw{position: relative; width: 100%;}
+.login_box .input_id input,
+.login_box .input_pw input{width: 100%; height: 60px; padding: 0 20px; font-size: 16px; border: 1px solid #e2e5eb; transition: all .2s; outline: none;}
+.login_box .input_id input{border-radius: 6px 6px 0 0; border-bottom: 1px solid #fff;}
+.login_box .input_pw input{border-radius: 0 0 6px 6px;}
+
+.login_box .id_save{margin-top: 15px;}
+.login_box .id_save label{font-size: 15px;}
+
+.login_box .login_btn_wrap{margin-top: 30px;}
+.login_box .login_btn_wrap button{width: 100%; height: 60px; border-radius: 6px; font-size: 16px; font-weight: 700;}
+.login_box .login_btn_wrap button:last-child{margin-top: 10px;}
+
+
+.sns_login{margin-top: 70px;}
+.sns_login .sns_login_tit{position: relative; display: block; text-align: center;}
+.sns_login .sns_login_tit::before{content: ''; position: absolute; top: 50%; left: 0; width: 100%; border-bottom: 1px solid #e2e5eb; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);}
+.sns_login .sns_login_tit span{position: relative; z-index: 1; display: inline-block; padding: 0 15px; font-size: 16px; font-weight: 600; background-color: #fff;}
+.sns_login .sns_login_con{margin-top: 25px; margin-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;}
+.sns_login .sns_login_con li{position: relative; display: flex;}
+.sns_login .sns_login_con li:not(:first-child){margin-left: 40px;}
+.sns_login .sns_login_con li a{width: 60px; height: 60px;}
+.sns_login .sns_login_con li .btn_kakao{background: url(../images/ic_kakao.png) center no-repeat;}
+.sns_login .sns_login_con li .btn_naver{background: url(../images/ic_naver.png) center no-repeat;}
+.sns_login .sns_login_con li .btn_google{background: url(../images/ic_google.png) center no-repeat;}
+
+
+
+
+
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .login_box .input_id input,
+    .login_box .input_pw input,
+    .login_box .login_btn_wrap button {height: 50px; font-size: 15px;}
+
+    .sns_login{margin-top: 50px;}
+    .sns_login .sns_login_con li:not(:first-child){margin-left: 30px;}
+}
+

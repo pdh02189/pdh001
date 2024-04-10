@@ -92,6 +92,7 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
 /* 미디어쿼리 1200 */
 @media (max-width: 1200px){
     header .header_inner,
+    main .main_content,
     footer .footer_top ul,
     footer .footer_inner{width: calc(100% - 40px);}
 }
@@ -319,6 +320,9 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
 
 
     main{padding-top: 90px;}
+    main .main_content{padding: 20px 0 50px;}
+    main .main_content .sub_tit{padding: 30px 0;}
+    main .main_content .sub_tit h3{font-size: 32px;}
 
     footer .footer_inner{flex-direction: column; padding: 35px 0;}
     footer .footer_inner .footer_logo{margin-bottom: 20px;}

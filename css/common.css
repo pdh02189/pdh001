@@ -2,6 +2,7 @@
 
 /* common */
 .btn_red{background: #f95353; color: #fff;}
+.btn_red2{background: #fff; border: 1px solid #f95353; color: #f95353;}
 .btn_white{background: #fff; color: #000; border: 1px solid #e2e5eb;}
 .font_red{color: #f95353;}
 .font_gray{color: #a0a3aa;}
