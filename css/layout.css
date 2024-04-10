@@ -64,8 +64,8 @@ main .main_content .sub_nav a:first-child::after{content: ''; display: flex; bac
 main .main_content .sub_tit{position: relative; width: 100%; padding: 40px 0;}
 main .main_content .sub_tit h3{text-align: center; font-family: 'HancomUljuBangudae'; font-size: 36px;}
 main .main_content .sub_tit .btn_write{display: flex; position: absolute; z-index: 1; right: 0; top: 50%; transform: translateY(-50%); width: 160px; height: 48px; align-items: center; justify-content: center; font-size: 16px; font-weight: 600;border-radius: 6px;}
-main .main_content .sub_tit .btn_write span{font-size: inherit; color: inherit; font-weight: inherit;}
-main .main_content .sub_tit .btn_write::before{content: ''; width: 18px; height: 16px; background: url(../images/ic_write.png) center no-repeat; margin-right: 8px;}
+main .main_content .sub_tit .btn_write span{margin-left: 8px; font-size: inherit; color: inherit; font-weight: inherit;}
+main .main_content .sub_tit .btn_write::before{content: ''; width: 18px; height: 16px; background: url(../images/ic_write.png) center no-repeat;}
 main .main_content .sub_tit .btn_write.admin_btn{display: none;}
 .admin main .main_content .sub_tit .btn_write.admin_btn{display: flex;}
 
@@ -332,7 +332,6 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
 
     main .main_content .sub_tit .btn_write{top: -18px; transform: translate(0); width: 126px; height: 42px; font-size: 15px;}
 
-
     footer .footer_inner{flex-direction: column; padding: 35px 0;}
     footer .footer_inner .footer_logo{margin-bottom: 20px;}
     footer .footer_inner address{margin-left: 0;}
@@ -350,7 +349,6 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
     main{padding-top: 70px;}
     main .main_content .sub_tit .btn_write{position: fixed; top: auto; right: 20px; bottom: 20px; width: 60px; height: 60px; border-radius: 50%;}
     main .main_content .sub_tit .btn_write span{display: none;}
-    main .main_content .sub_tit .btn_write::before{margin-right: 0;}
 
     footer .footer_top{height: 40px;}
     footer .footer_top ul li a{font-size: 14px;}
