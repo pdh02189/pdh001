@@ -63,8 +63,9 @@ main .main_content .sub_nav a{font-size: 14px; display: flex; align-items: cente
 main .main_content .sub_nav a:first-child::after{content: ''; display: flex; background: url(../images/ic_subnav.png) center no-repeat; width: 6px; height: 10px; margin: 0 6px;}
 main .main_content .sub_tit{position: relative; width: 100%; padding: 40px 0;}
 main .main_content .sub_tit h3{text-align: center; font-family: 'HancomUljuBangudae'; font-size: 36px;}
-
-
+main .main_content .sub_tit .btn_write{display: none; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 160px; height: 48px; align-items: center; justify-content: center; font-size: 16px; font-weight: 600;border-radius: 6px;}
+main .main_content .sub_tit .btn_write::before{content: ''; width: 18px; height: 16px; background: url(../images/ic_write.png) center no-repeat; margin-right: 8px;}
+.admin main .main_content .sub_tit .btn_write{display: flex;}
 
 /* footer */
 footer{position: relative; width: 100%; background: #fff;}
@@ -326,6 +327,9 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
     main .main_content .sub_tit{padding: 30px 0;}
     main .main_content .sub_tit h3{font-size: 32px;}
 
+    main .main_content .sub_tit .btn_write{top: -18px; transform: translate(0); width: 126px; height: 42px; font-size: 15px;}
+
+
     footer .footer_inner{flex-direction: column; padding: 35px 0;}
     footer .footer_inner .footer_logo{margin-bottom: 20px;}
     footer .footer_inner address{margin-left: 0;}
@@ -341,6 +345,8 @@ footer .footer_inner address p{font-size: 15px; color: #777777; line-height: 1.5
     header .mobile_menu .side_menu{top: 70px; height: calc(100vh - 70px);}
 
     main{padding-top: 70px;}
+    main .main_content .sub_tit .btn_write{width: 100px; height: 38px; font-size: 14px; font-weight: 500;}
+    main .main_content .sub_tit .btn_write::before{width: 15px; height: 13px; background-size: cover; margin-right: 4px;}
 
     footer .footer_top{height: 40px;}
     footer .footer_top ul li a{font-size: 14px;}

@@ -155,8 +155,11 @@ input[type="checkbox"]:checked {
     .comm_list li:nth-child(2n){margin-right: 0px;}
 
     .comm_list li a .list_img{border-radius: 10px;}
-    .comm_list li a .list_txt .list_price{font-size: 20px; margin: 6px 0;}
-    .comm_list li a .list_txt .list_info{margin-top: 8px;}
+    .comm_list li a .list_txt .list_tit{font-size: 15px;}
+    .comm_list li a .list_txt .list_price{font-size: 18px; margin: 6px 0;}
+    .comm_list li a .list_txt .list_info{margin-top: 6px;}
+    .comm_list li a .list_txt .list_info .name,
+    .comm_list li a .list_txt .list_info .date{font-size: 14px;}
     .paging1{margin-top: 40px;}
 }
 
