@@ -30,38 +30,9 @@ label,select,input,textarea {vertical-align: middle}
 .txt_cut5{-webkit-line-clamp:5;/* 라인수 */ }
 
 
-/* placeholder 색상 */
-input::placeholder{color: #a0a3aa;}
-input::-webkit-input-placeholder{color: #a0a3aa;}
-input:-ms-input-placeholder{color: #a0a3aa;}
-textarea::placeholder{color: #a0a3aa;}
-textarea::-webkit-input-placeholder{color: #a0a3aa;}
-textarea:-ms-input-placeholder{color: #a0a3aa;}
-
-input[type="text"]:focus:not(:disabled),
-input[type="password"]:focus:not(:disabled),
-input[type="text"]:hover:not(:disabled),
-input[type="password"]:hover:not(:disabled){border: 1px solid #000 !important;}
-
-/* checkbox */
-input[type="checkbox"]{vertical-align: middle;
-    appearance: none;
-    border: 1px solid #e2e5eb;
-    background: #fff;
-    border-radius: 3px;
-    width: 16px;
-    height: 16px;
-    transition: border 0.2s ease-in-out;
-    cursor: pointer;
-}
-input[type="checkbox"]:checked {
-    border: 1px solid #f95353;
-    background: url(../images/ic_check.png)50% 50% no-repeat;
-    background-color: #f95353;
-    transition: border 0.2s ease-in-out;
-}
-
 /* Chrome, Safari용 스크롤 바 */
 ::-webkit-scrollbar{width: 6px;}
 ::-webkit-scrollbar-track{background: #f0f0f0; border-radius: 5px;}
 ::-webkit-scrollbar-thumb{background: #ccc; border-radius: 5px;}
+
+.nowrap::-webkit-scrollbar{display: none;}

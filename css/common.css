@@ -1,11 +1,71 @@
 @charset "UTF-8";
 
+/* placeholder 색상 */
+input::placeholder{color: #a0a3aa;}
+input::-webkit-input-placeholder{color: #a0a3aa;}
+input:-ms-input-placeholder{color: #a0a3aa;}
+textarea::placeholder{color: #a0a3aa;}
+textarea::-webkit-input-placeholder{color: #a0a3aa;}
+textarea:-ms-input-placeholder{color: #a0a3aa;}
+
+.write_box input[type="text"]:focus:not(:disabled),
+.write_box input[type="password"]:focus:not(:disabled),
+.write_box input[type="text"]:hover:not(:disabled),
+.write_box input[type="password"]:hover:not(:disabled){border: 1px solid #000 !important;}
+
+/* checkbox */
+input[type="checkbox"]{vertical-align: middle;
+    appearance: none;
+    border: 1px solid #e2e5eb;
+    background: #fff;
+    border-radius: 3px;
+    width: 16px;
+    height: 16px;
+    transition: border 0.2s ease-in-out;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    border: 1px solid #f95353;
+    background: url(../images/ic_check.png)50% 50% no-repeat;
+    background-color: #f95353;
+    transition: border 0.2s ease-in-out;
+}
+
+
 /* common */
 .btn_red{background: #f95353; color: #fff;}
 .btn_red2{background: #fff; border: 1px solid #f95353; color: #f95353;}
 .btn_white{background: #fff; color: #000; border: 1px solid #e2e5eb;}
 .font_red{color: #f95353;}
 .font_gray{color: #a0a3aa;}
+
+
+/* 리스트 상단 */
+.comm_list_top .list_category{display: flex; align-items: center; flex-wrap: nowrap; white-space: nowrap; overflow-x: auto; margin-bottom: 30px;}
+.comm_list_top .list_category li,
+.comm_list_top .list_category li p {position: relative;}
+.comm_list_top .list_category li:not(:last-child) p {margin-right: 14px;}
+.comm_list_top .list_category li p input[type="radio"] {display:none;}
+.comm_list_top .list_category li p input[type="radio"] + label {font-size: 15px; color: #000; background: #fff; display: flex; align-items: center; font-weight: 500; padding: 0 24px; height: 46px; border: 1px solid #e2e5eb; border-radius: 23px;}
+.comm_list_top .list_category li p input[type="radio"]:checked + label {background: #f95353; color: #fff; border: none;}
+
+.comm_list_top .list_total_wrap{display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 20px;}
+.comm_list_top .list_total{position: relative;}
+.comm_list_top .list_total p{font-size: 15px; font-weight: 500;}
+.comm_list_top .list_total p span{font-size: inherit; font-weight: 700; margin: 0 1px;}
+.comm_list_top .list_total p .mobile_none{font-size: inherit; font-weight: 500;}
+
+.comm_list_top .list_sort {display: flex; margin-left: auto;}
+.comm_list_top .list_sort li,
+.comm_list_top .list_sort li p {position: relative;}
+.comm_list_top .list_sort li:not(:last-child) p {margin-right: 20px;}
+.comm_list_top .list_sort li p::before {content: '·';position: absolute;top: 50%;transform: translateY(-50%);left: -10px;color: #a0a3aa;}
+.comm_list_top .list_sort li:first-child p::before {content: '';}
+.comm_list_top .list_sort li p input[type="radio"] {display:none;}
+.comm_list_top .list_sort li p input[type="radio"] + label {color:#a0a3aa;font-size: 15px;display: flex;align-items: center; font-weight: 500;}
+.comm_list_top .list_sort li p input[type="radio"] + label span {display: none;}
+.comm_list_top .list_sort li p input[type="radio"]:checked + label {color: #000;}
+.comm_list_top .list_sort li p input[type="radio"]:checked + label span {display: inline-block;margin-right: 5px;width: 13px;height: 10px;background: url(../images/ic_sort.png)50% 50% no-repeat;}
 
 
 /* 리스트 공통 */
@@ -31,7 +91,46 @@
 .comm_list li a .list_txt .list_info .date::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
 
 
+/* 페이징 형식 */
 
+/* 1~5
+    <div id="" class="">
+        <p>
+            <span class="numPN m_ar"><a href="#" data-page="1" title="처음 페이지로 이동하기"><img src="image/ic_prev2.png" alt="처음 페이지"></a></span>
+            <span class="numPN over left"><a href="#" data-page="1" title="이전 페이지로 이동하기"><img src="image/ic_prev.png" alt="이전 페이지"></a></span>
+            <span class="Present"><a class="on" href="#" data-page="1">1</a></span>
+            <span><a href="#" data-page="2">2</a></span>
+            <span><a href="#" data-page="3">3</a></span>
+            <span><a href="#" data-page="4">4</a></span>
+            <span><a href="#" data-page="5">5</a></span>
+            <span class="numPN  over right"><a href="#" data-page="11" title="다음 페이지로 이동하기"><img src="image/ic_next.png" alt="다음 페이지"></a></span>
+            <span class="numPN m_ar"><a href="#" data-page="14" title="마지막 페이지로 이동하기"><img src="image/ic_next2.png" alt="마지막 페이지"></a></span>
+        </p>
+    </div>
+*/
+
+/* 페이징1 */
+.paging1{clear: both; margin: 0 auto; text-align: center; position: relative; margin-top: 60px;}
+.paging1 p{display: flex; align-items: center; justify-content: center;}
+.paging1 p span a{display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; line-height: 30px; margin: 0 2px; font-size: 14px; color: #000; font-weight: 500; text-decoration: none; transition: all .2s;}
+.paging1 p span:first-child a{margin-left: 0;}
+.paging1 p span a:hover{color: #f95353;}
+.paging1 .numPN a{width: 24px; height: 30px;}
+.paging1 .numPN a img{width: 10px; height: 10px;}
+.paging1 .Present a{color: #fff; font-weight: 600; background-color: #f95353; border-radius: 10px;}
+.paging1 .Present a:hover{color: #fff;}
+
+
+/* 미디어쿼리 1200 */
+@media (max-width: 1200px){
+
+}
+
+
+/* 미디어쿼리 1024 */
+@media (max-width: 1024px){
+
+}
 
 
 /* 미디어쿼리 900 */
@@ -41,17 +140,19 @@
     .comm_list li:nth-child(4n){margin-right: 20px;}
     .comm_list li:nth-child(-n + 3){margin-top: 0px;}
     .comm_list li:nth-child(3n){margin-right: 0px;}
-    .comm_list li:nth-last-child(-n + 1){display: none;}
 }
 
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
+    .comm_list_top .list_total p .mobile_none{display: none;}
+    .comm_list_top .list_category li p input[type="radio"] + label {font-size: 14px; padding: 0 20px; height: 40px; border: 1px solid #e2e5eb; border-radius: 20px;}
+    .comm_list_top .list_category li:not(:last-child) p {margin-right: 8px;}
+
     .comm_list li{width: calc(100%/2 - 20px/2); margin-top: 40px !important;}
     .comm_list li:nth-child(-n + 3){margin-top: 40px;}
     .comm_list li:nth-child(3n){margin-right: 20px;}
     .comm_list li:nth-child(-n + 2){margin-top: 0px !important;}
     .comm_list li:nth-child(2n){margin-right: 0px;}
-    .comm_list li:nth-last-child(-n + 1){display: block;}
 
     .comm_list li a .list_img{border-radius: 10px;}
     .comm_list li a .list_txt .list_price{font-size: 20px; margin: 6px 0;}

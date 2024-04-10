@@ -65,6 +65,8 @@
 
 /* 미디어쿼리 900 */
 @media (max-width: 900px){
+    .comm_list li:nth-last-child(-n + 1){display: none;}
+
     .recipe_category .main_con li{width: calc(100%/5); margin-top: 20px;}
     .recipe_category .main_con li:nth-child(-n + 5){margin-top: 0;}
     .recipe_category .main_con li a .cate_img{margin-bottom: 15px;}
@@ -84,10 +86,14 @@
     .cooking_tip .tip_list li:first-child{margin-top: 0;}
     .cooking_tip .tip_list li a .list_txt .list_tit{font-size: 18px;}
 }
+
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
     .main_tit{margin-bottom: 22px;}
     .momuk_tit{font-size: 26px;}
+
+    .comm_list li:nth-last-child(-n + 1){display: block;}
+    
     .recipe_category .main_tit{margin-bottom: 30px;}
     .recipe_category .main_con li a .cate_img{width: 50px; height: 50px;}
     .recipe_category .main_con li a .cate_txt{font-size: 14px;}
