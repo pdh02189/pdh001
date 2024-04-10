@@ -157,6 +157,7 @@ input[type="checkbox"]:checked {
     .comm_list li a .list_img{border-radius: 10px;}
     .comm_list li a .list_txt .list_price{font-size: 20px; margin: 6px 0;}
     .comm_list li a .list_txt .list_info{margin-top: 8px;}
+    .paging1{margin-top: 40px;}
 }
 
 
