@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: 'SBAggroB';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 #wrapper{position: relative; width: 100%; height: auto; overflow: hidden;}
 
 
