@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘뭐먹지?</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/event.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="login admin"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <header>
+            <h2 class="d_none">헤더 영역</h2>
+            <div class="header_inner">
+                <a href="../index.html" class="header_logo"></a>
+                <div class="search_box">
+                    <form>
+                        <fieldset>
+                            <legend class="d_none">검색</legend>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="my_wrap">
+                    <ul class="top">
+                        <li class="join">
+                            <a href="../join.html">회원가입</a>
+                        </li>
+                        <li class="login">
+                            <a href="../login.html">로그인</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                    <ul class="my">
+                        <li class="mypage">
+                            <a href="../mypage/myinfo.html">마이페이지</a>
+                        </li>
+                        <li class="cart">
+                            <a href="../mypage/cart.html">장바구니</a>
+                        </li>
+                        <li class="delivery">
+                            <a href="../mypage/delivery.html">배송조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <h3 class="d_none">글로벌 네비게이션 영역</h3>
+                <ul>
+                    <li>
+                        <a href="../store/index.html">스토어</a>
+                    </li>
+                    <li>
+                        <a href="../recipe/index.html">레시피</a>
+                    </li>
+                    <li>
+                        <a href="../cookingtip/index.html">요리 꿀팁</a>
+                    </li>
+                    <li>
+                        <a href="../ranking/index.html">랭킹</a>
+                    </li>
+                    <li class="on">
+                        <a href="../event/index.html">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="../store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="../recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="../cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="../ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="../event/index.htmll" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="../login.html" class="login btn_red">로그인</a>
+                                <a href="../join.html" class="join btn_white">회원가입</a>
+                                <a href="../mypage/myinfo.html" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m_dim"></div>
+
+        <main>
+            <h2 class="d_none">메인 영역</h2>
+            <div class="main_content">
+                <div class="sub_nav">
+                    <a href="../index.html" class="font_gray">홈</a>
+                    <a href="../event/index.html">이벤트</a>
+                </div>
+                <div class="sub_tit">
+                    <h3>이벤트</h3>
+                    <button type="button" class="btn_write btn_red admin_btn" onclick="location.href='write.html'"><span>이벤트 등록</span></button>
+                </div>
+                <ul class="event_list">
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img01.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state01"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img01.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state02"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img01.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state02"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img01.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state02"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img01.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state02"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img02.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state03"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img02.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state03"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img02.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state03"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img02.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state03"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../event/detail.html">
+                            <div class="list_img">
+                                <img src="../images/event_test_img02.jpg" alt="이벤트 대표 이미지">
+                            </div>
+                            <div class="list_txt">
+                                <!-- 진행예정 state01 진행중 state02 종료 state03 클래스-->
+                                <span class="state03"></span>
+                                <span class="date font_gray">2024.03.20 ~ 2024.05.16</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="paging1">
+                    <p>
+                        <span class="numPN m_ar"><a href="#" data-page="1" title="처음 페이지로 이동하기"><img src="../images/ic_prev2.png" alt="처음 페이지"></a></span>
+                        <span class="numPN over left"><a href="#" data-page="1" title="이전 페이지로 이동하기"><img src="../images/ic_prev.png" alt="이전 페이지"></a></span>
+                        <span class="Present"><a class="on" href="#" data-page="1">1</a></span>
+                        <span><a href="#" data-page="2">2</a></span>
+                        <span><a href="#" data-page="3">3</a></span>
+                        <span><a href="#" data-page="4">4</a></span>
+                        <span><a href="#" data-page="5">5</a></span>
+                        <span class="numPN  over right"><a href="#" data-page="11" title="다음 페이지로 이동하기"><img src="../images/ic_next.png" alt="다음 페이지"></a></span>
+                        <span class="numPN m_ar"><a href="#" data-page="14" title="마지막 페이지로 이동하기"><img src="../images/ic_next2.png" alt="마지막 페이지"></a></span>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="d_none">푸터 영역</h2>
+            <div class="footer_top">
+                <ul>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <a href="../index.html" class="footer_logo"></a>
+                <address>
+                    <p>COPYRIGHT&copy; 2024 오늘뭐먹지? All rights reserved.</p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

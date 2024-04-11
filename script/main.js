@@ -52,6 +52,37 @@ $(function() {
     $('.search_btn').click(function() {
         $('.m_search_popup').css('display', 'block');
     });
+
+    //탭1
+    const tabs1 = document.querySelectorAll(".tab1");
+    const tabContent1 = document.querySelectorAll(".tab_content1");
+    
+    let tabNo1 = 0;
+    let contentNo1 = 0;
+    
+    tabs1.forEach((tab1) => {
+      tab1.dataset.id = tabNo1;
+      tabNo1++;
+      tab1.addEventListener("click", function () {
+        tabs1.forEach((tab1) => {
+          tab1.classList.remove("tab_active");
+          tab1.classList.add("non_active");
+        });
+        this.classList.remove("non_active");
+        this.classList.add("tab_active");
+        tabContent1.forEach((content1) => {
+          content1.classList.add("hidden");
+          if (content1.dataset.id === tab1.dataset.id) {
+              content1.classList.remove("hidden");
+          }
+        });
+      });
+    });
+    
+    tabContent1.forEach((content) => {
+      content.dataset.id = contentNo1;
+      contentNo1++;
+    });
 });
 
 // 외부영역 클릭 시 검색 팝업 닫기

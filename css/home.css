@@ -77,7 +77,7 @@
     .cooking_tip .tip_list li a .list_txt .list_con{-webkit-line-clamp: 1;white-space: nowrap;display: block;}
 }
 
-/* 미디어쿼리 800 */
+/* 미디어쿼리 700 */
 @media (max-width: 700px){
     .recipe_category,
     .cooking_tip{padding: 50px 0;}

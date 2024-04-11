@@ -14,22 +14,8 @@ textarea:-ms-input-placeholder{color: #a0a3aa;}
 .write_box input[type="password"]:hover:not(:disabled){border: 1px solid #000 !important;}
 
 /* checkbox */
-input[type="checkbox"]{vertical-align: middle;
-    appearance: none;
-    border: 1px solid #e2e5eb;
-    background: #fff;
-    border-radius: 3px;
-    width: 16px;
-    height: 16px;
-    transition: border 0.2s ease-in-out;
-    cursor: pointer;
-}
-input[type="checkbox"]:checked {
-    border: 1px solid #f95353;
-    background: url(../images/ic_check.png)50% 50% no-repeat;
-    background-color: #f95353;
-    transition: border 0.2s ease-in-out;
-}
+input[type="checkbox"]{vertical-align: middle; appearance: none; border: 1px solid #e2e5eb; background: #fff; border-radius: 3px; width: 16px; height: 16px; transition: border 0.2s ease-in-out; cursor: pointer;}
+input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../images/ic_check.png)50% 50% no-repeat; background-color: #f95353; transition: border 0.2s ease-in-out;}
 
 
 /* common */
@@ -90,6 +76,24 @@ input[type="checkbox"]:checked {
 .comm_list li a .list_txt .list_info .date{display: flex; align-items: center; font-size: 15px; font-weight: 400; margin-left: 8px;}
 .comm_list li a .list_txt .list_info .date::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
 
+.comm_list li a .list_txt .list_ic{width: 100%; display: flex; flex-wrap: wrap; align-items: center; margin-top: 8px;}
+.comm_list li a .list_txt .list_ic span{font-size: 14px; display: flex; align-items: center;}
+.comm_list li a .list_txt .list_ic .heart,
+.comm_list li a .list_txt .list_ic .comment{margin-left: 15px;}
+.comm_list li a .list_txt .list_ic .view::before{content: ''; background: url(../images/ic_view.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+.comm_list li a .list_txt .list_ic .heart::before{content: ''; background: url(../images/ic_heart.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+.comm_list li a .list_txt .list_ic .comment::before{content: ''; background: url(../images/ic_comment.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+
+
+/* 탭 */
+.tabs{position: relative; width: 100%; border-bottom: 1px solid #e2e5eb; display: flex; flex-wrap: wrap; margin-bottom: 30px;}
+.tabs .tab{position: relative; z-index: 0; margin-bottom: -1px; width: 160px; height: 48px; border-radius: 6px 6px 0 0; background: #f4f4f4; font-size: 15px; color: #a0a3aa; font-weight: 600; border: 1px solid #f4f4f4; border-bottom: 1px solid #e2e5eb;}
+.tabs .tab:not(:first-child){margin-left: -1px;}
+.tabs .tab span{font-size: inherit; color: inherit; font-weight: inherit; margin-left: 2px;}
+.tabs .tab:hover,
+.tabs .tab.tab_active{background: #fff; color: #f95353; border: 1px solid #e2e5eb; border-bottom: 1px solid #fff; z-index: 1;}
+
+.tab_content.hidden {display: none;}
 
 /* 페이징 형식 */
 

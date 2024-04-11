@@ -74,13 +74,13 @@
             <nav class="gnb">
                 <h3 class="d_none">글로벌 네비게이션 영역</h3>
                 <ul>
-                    <li class="on">
+                    <li>
                         <a href="../store/index.html">스토어</a>
                     </li>
                     <li>
                         <a href="../recipe/index.html">레시피</a>
                     </li>
-                    <li>
+                    <li class="on">
                         <a href="../cookingtip/index.html">요리 꿀팁</a>
                     </li>
                     <li>
@@ -128,11 +128,11 @@
             <div class="main_content">
                 <div class="sub_nav">
                     <a href="../index.html" class="font_gray">홈</a>
-                    <a href="../store/index.html">스토어</a>
+                    <a href="../cookingtip/index.html">요리 꿀팁</a>
                 </div>
                 <div class="sub_tit">
-                    <h3>스토어</h3>
-                    <button type="button" class="btn_write btn_red admin_btn" onclick="location.href='write.html'"><span>상품등록</span></button>
+                    <h3>요리 꿀팁</h3>
+                    <button type="button" class="btn_write btn_red" onclick="location.href='write.html'"><span>꿀팁 작성</span></button>
                 </div>
                 <div class="comm_list_top">
                     <ul class="list_category nowrap">
@@ -148,7 +148,7 @@
                             <p>
                                 <input type="radio" id="l_cate02" name="list_category">
                                 <label for="l_cate02">
-                                    신선식품
+                                    손질법
                                 </label>
                             </p>
                         </li>
@@ -156,7 +156,7 @@
                             <p>
                                 <input type="radio" id="l_cate03" name="list_category">
                                 <label for="l_cate03">
-                                    간편식
+                                    보관법
                                 </label>
                             </p>
                         </li>
@@ -164,7 +164,7 @@
                             <p>
                                 <input type="radio" id="l_cate04" name="list_category">
                                 <label for="l_cate04">
-                                    가공식품
+                                    요리정보
                                 </label>
                             </p>
                         </li>
@@ -172,29 +172,21 @@
                             <p>
                                 <input type="radio" id="l_cate05" name="list_category">
                                 <label for="l_cate05">
-                                    주방용품
-                                </label>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <input type="radio" id="l_cate06" name="list_category">
-                                <label for="l_cate06">
-                                    주방가전
+                                    기타정보
                                 </label>
                             </p>
                         </li>
                     </ul>
                     <div class="list_total_wrap">
                         <div class="list_total">
-                            <p>총 <span>140</span>개<strong class="mobile_none">의 상품이 있습니다.</strong></p>
+                            <p>총 <span>201</span>개<strong class="mobile_none">의 꿀팁이 있습니다.</strong></p>
                         </div>
                         <ul class="list_sort">
                             <li>
                                 <p>
                                     <input type="radio" id="act01" name="act" checked="">
                                     <label for="act01">
-                                        <span></span>신상품
+                                        <span></span>최신순
                                     </label>
                                 </p>
                             </li>
@@ -202,15 +194,7 @@
                                 <p>
                                     <input type="radio" id="act02" name="act">
                                     <label for="act02">
-                                        <span></span>낮은가격
-                                    </label>
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    <input type="radio" id="act03" name="act">
-                                    <label for="act03">
-                                        <span></span>높은가격
+                                        <span></span>조회순
                                     </label>
                                 </p>
                             </li>
@@ -219,193 +203,217 @@
                 </div>
                 <ul class="comm_list">
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img01.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img01.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">올덴버거 쉐프 쿠킹크림 1L 1개 (파스타 500g 증정)</p>
-                                <p class="list_price">6,600원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">애호박 비닐 쉽게 벗기는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img02.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img02.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">다향오리 1등급 훈제 오리 슬라이스, 600, 1개</p>
-                                <p class="list_price">12,990원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">옥수수 알맹이 예쁘게 써는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img03.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img03.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">포크밸리 한돈 1등급이상 삼겹살 구이용(냉장), 1kg, 1팩</p>
-                                <p class="list_price">22,900원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.6</span>
-                                    <span class="cnt font_gray">(41)</span>
+                                <p class="list_tit txt_cut2">밥 맛있게 짓는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img04.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img04.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">산과들에 원데이발란스그린 하루견과 100봉, 20g, 100개</p>
-                                <p class="list_price">29,380원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.9</span>
-                                    <span class="cnt font_gray">(20)</span>
+                                <p class="list_tit txt_cut2">칼에 버터 안 묻히고 소분하는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img01.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img01.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">올덴버거 쉐프 쿠킹크림 1L 1개 (파스타 500g 증정)</p>
-                                <p class="list_price">6,600원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">애호박 비닐 쉽게 벗기는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img02.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img02.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">다향오리 1등급 훈제 오리 슬라이스, 600, 1개</p>
-                                <p class="list_price">12,990원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">옥수수 알맹이 예쁘게 써는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img03.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img03.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">포크밸리 한돈 1등급이상 삼겹살 구이용(냉장), 1kg, 1팩</p>
-                                <p class="list_price">22,900원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.6</span>
-                                    <span class="cnt font_gray">(41)</span>
+                                <p class="list_tit txt_cut2">밥 맛있게 짓는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img04.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img04.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">산과들에 원데이발란스그린 하루견과 100봉, 20g, 100개</p>
-                                <p class="list_price">29,380원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.9</span>
-                                    <span class="cnt font_gray">(20)</span>
+                                <p class="list_tit txt_cut2">칼에 버터 안 묻히고 소분하는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img01.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img01.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">올덴버거 쉐프 쿠킹크림 1L 1개 (파스타 500g 증정)</p>
-                                <p class="list_price">6,600원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">애호박 비닐 쉽게 벗기는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img02.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img02.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">다향오리 1등급 훈제 오리 슬라이스, 600, 1개</p>
-                                <p class="list_price">12,990원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">5.0</span>
-                                    <span class="cnt font_gray">(2)</span>
+                                <p class="list_tit txt_cut2">옥수수 알맹이 예쁘게 써는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img03.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img03.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">포크밸리 한돈 1등급이상 삼겹살 구이용(냉장), 1kg, 1팩</p>
-                                <p class="list_price">22,900원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.6</span>
-                                    <span class="cnt font_gray">(41)</span>
+                                <p class="list_tit txt_cut2">밥 맛있게 짓는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="../store/detail.html">
+                        <a href="../cookingtip/detail.html">
                             <div class="list_img">
-                                <img src="../images/store_test_img04.jpg" alt="스토어 이미지">
+                                <img src="../images/tip_test_img04.jpg" alt="레시피 대표 이미지">
                             </div>
                             <div class="list_txt">
-                                <p class="list_tit txt_cut2">산과들에 원데이발란스그린 하루견과 100봉, 20g, 100개</p>
-                                <p class="list_price">29,380원</p>
-                                <div class="review">
-                                    <span class="img"></span>
-                                    <span class="score">4.9</span>
-                                    <span class="cnt font_gray">(20)</span>
+                                <p class="list_tit txt_cut2">칼에 버터 안 묻히고 소분하는 법</p>
+                                <div class="list_info">
+                                    <span class="name">요리조아</span>
+                                    <span class="date font_gray">2024.03.23</span>
+                                </div>
+                                <div class="list_ic">
+                                    <span class="view font_gray">24</span>
+                                    <span class="comment font_gray">2</span>
                                 </div>
                             </div>
                         </a>

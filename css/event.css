@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.event_list{position: relative; width: 100%; display: flex; align-items: flex-start; flex-wrap: wrap;}
+.event_list li{position: relative; width: calc(100%/2 - 40px/2); margin-right: 40px; margin-top: 40px;}
+.event_list li:nth-child(-n + 2){margin-top: 0;}
+.event_list li:nth-child(2n){margin-right: 0;}
+.event_list li a{position: relative; width: 100%; display: inline-block;}
+.event_list li a .list_img{position: relative; width: 100%; padding-top: 25.518%; border: 1px solid #e2e5eb; border-radius: 20px; overflow: hidden; margin-bottom: 12px;}
+.event_list li a .list_img img{position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; margin: auto;}
+
+.event_list li a .list_txt{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between;}
+.event_list li a .list_txt span{font-size: 18px; font-weight: 700;}
+.event_list li a .list_txt .state01::before{content: '진행예정'; color: #333;}
+.event_list li a .list_txt .state02::before{content: '진행중'; color: #f95353;}
+.event_list li a .list_txt .state03::before{content: '종료'; color: #a0a3aa;}
+.event_list li a .list_txt .date{font-size: 15px; font-weight: 400;}
+
+
+
+
+/* 미디어쿼리 900 */
+@media (max-width: 900px){
+    .event_list li{position: relative; width: calc(100%/2 - 20px/2); margin-right: 20px; margin-top: 30px;}
+}
+
+/* 미디어쿼리 700 */
+@media (max-width: 700px){
+    .event_list li{position: relative; width: 100%; margin-right: 0px;}
+    .event_list li:nth-child(-n + 2){margin-top: 30px;}
+    .event_list li:first-child{margin-top: 0;}
+}
+
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .event_list li a .list_img{border-radius: 10px;}
+    .event_list li,
+    .event_list li:nth-child(2){margin-top: 20px;}
+    .event_list li a .list_img{margin-bottom: 8px;}
+    .event_list li a .list_txt span{font-size: 16px;}
+    .event_list li a .list_txt .date{font-size: 14px;}
+}
+
+
+
+
+
+
+
+
+
