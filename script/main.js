@@ -53,6 +53,14 @@ $(function() {
         $('.m_search_popup').css('display', 'block');
     });
 
+    //공유하기 팝업
+    $('.btn_share').click(function(){
+      $('.share_popup').css('display','block');
+    });
+    $('.share_popup .popup_close').click(function(){
+      $('.share_popup').css('display','none');
+    });
+
     //탭1
     const tabs1 = document.querySelectorAll(".tab1");
     const tabContent1 = document.querySelectorAll(".tab_content1");

@@ -26,6 +26,27 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 .font_gray{color: #a0a3aa;}
 .mr5{margin-right: 5px;}
 
+/* 공유하기 팝업 */
+.share_popup {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);z-index: 2000;}
+.share_popup .white_box {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 80%;max-width: 400px;background: #fff; padding: 20px; border-radius: 10px;}
+.share_popup .white_box .popup_title {position: relative;display: flex; align-items: center; font-size: 17px;font-weight: 600;color: #000;}
+.share_popup .white_box .popup_title .popup_close {position: absolute;right: 0px;top: 50%;transform: translateY(-50%);}
+.share_popup .white_box .popup_title .popup_close img {vertical-align: baseline !important;transition: all .2s;}
+.share_popup .white_box .popup_title .popup_close:hover img {transform: rotate(180deg);}
+.share_popup .white_box .share_sns {padding-top: 20px;text-align: center;margin: 0 auto;font-size: 0;}
+.share_popup .white_box .share_sns > span {width: 60px;height: 60px;display: inline-block;margin: 0 15px;cursor: pointer;font-size: 14px;text-align: center;}
+.share_popup .white_box .share_sns > span > a {display: inline-block;}
+.share_popup .white_box .share_sns > span > a img {width: 100%;height: 100%;display: block;padding-bottom: 5px;transition: all .2s;}
+.share_popup .white_box .share_sns > span > a img:hover {opacity: .9;}
+
+/* 팝업 공통 */
+.popup_black{display: none; position: fixed; top:0; width: 100%; height: 100%; z-index: 2000; background: rgba(0, 0, 0, .4); align-items: center; justify-content: center;}
+.popup_black .popup_white{position: relative; max-height: 90vh; overflow-y: auto; padding: 30px; box-sizing: border-box; background: #fff; border-radius: 10px; box-shadow: 0 0 16px 0 rgba(0, 0, 0, .2);}
+.popup_black .popup_white .close{position: absolute; top: 30px; right: 30px;}
+.popup_black .popup_white .popup_tit{display: flex; align-items: center; width: 100%; margin-bottom: 25px;}
+.popup_black .popup_white .popup_tit h3{display: flex; align-items: center; font-size: 16px; font-weight: 600; line-height: 1.2em;}
+.popup_black .popup_white .popup_con{width: 100%;}
+.popup_black .popup_white .popup_con form{width: 100%;}
 
 
 /* 리스트 상단 */
@@ -195,6 +216,9 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
 /* 미디어쿼리 1024 */
 @media (max-width: 1024px){
+    /* 팝업 공통 */
+    .popup_black .popup_white{padding: 20px;}
+    .popup_black .popup_white .close{top: 20px; right: 20px;}
 
 }
 
@@ -218,6 +242,9 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
+    .popup_black .popup_white{min-height: 100vh; border-radius: 0;}
+    .common_popup_wrap .common_popup{width: 100%;}
+    
     .comm_list_top .list_total p .mobile_none{display: none;}
     .comm_list_top .list_category li p input[type="radio"] + label {font-size: 14px; padding: 0 20px; height: 40px; border: 1px solid #e2e5eb; border-radius: 20px;}
     .comm_list_top .list_category li:not(:last-child) p {margin-right: 8px;}
@@ -259,7 +286,8 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_box_write .write_info .comm_write_button.small_btn{width: 56px; height: 36px; font-size: 14px;}
     .comm_detail_comment_list ul li{padding: 18px 0;}
     .comm_box_list h5{font-size: 15px;}
-
+    .comm_detail_btn{margin-top: 10px;}
+    .comm_detail_btn .btn_back{width: 120px; height: 42px; font-size: 16px;}
 
     .paging1{margin-top: 40px;}
 }
