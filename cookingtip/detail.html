@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘뭐먹지?</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="login admin"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <header>
+            <h2 class="d_none">헤더 영역</h2>
+            <div class="header_inner">
+                <a href="../index.html" class="header_logo"></a>
+                <div class="search_box">
+                    <form>
+                        <fieldset>
+                            <legend class="d_none">검색</legend>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="my_wrap">
+                    <ul class="top">
+                        <li class="join">
+                            <a href="../join.html">회원가입</a>
+                        </li>
+                        <li class="login">
+                            <a href="../login.html">로그인</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                    <ul class="my">
+                        <li class="mypage">
+                            <a href="../mypage/myinfo.html">마이페이지</a>
+                        </li>
+                        <li class="cart">
+                            <a href="../mypage/cart.html">장바구니</a>
+                        </li>
+                        <li class="delivery">
+                            <a href="../mypage/delivery.html">배송조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <h3 class="d_none">글로벌 네비게이션 영역</h3>
+                <ul>
+                    <li>
+                        <a href="../store/index.html">스토어</a>
+                    </li>
+                    <li>
+                        <a href="../recipe/index.html">레시피</a>
+                    </li>
+                    <li class="on">
+                        <a href="../cookingtip/index.html">요리 꿀팁</a>
+                    </li>
+                    <li>
+                        <a href="../ranking/index.html">랭킹</a>
+                    </li>
+                    <li>
+                        <a href="../event/index.html">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="../store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="../recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="../cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="../ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="../event/index.html" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="../login.html" class="login btn_red">로그인</a>
+                                <a href="../join.html" class="join btn_white">회원가입</a>
+                                <a href="../mypage/myinfo.html" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m_dim"></div>
+
+        <main>
+            <h2 class="d_none">메인 영역</h2>
+            <div class="main_content">
+                <div class="sub_nav">
+                    <a href="../index.html" class="font_gray">홈</a>
+                    <a href="../cookingtip/index.html">요리 꿀팁</a>
+                </div>
+                <div class="comm_detail_top">
+                    <!-- 글쓴이만 보이는 버튼 -->
+                    <div class="writer_btn_wrap">
+                        <button type="button" class="btn_edit">수정</button>
+                        <button type="button" class="btn_del">삭제</button>
+                    </div>
+                    <div class="comm_detail_tit">
+                        <h4>애호박 비닐 쉽게 벗기는 법</h4>
+                        <ul class="tit_info">
+                            <li class="writer"><p>요리조아</p></li>
+                            <li class="date font_gray"><p>2024.03.23</p></li>
+                            <li class="view font_gray"><p>24</p></li>
+                            <li class="comment font_gray"><p>2</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comm_detail_con">
+                    <p>
+                        여름철 뙤약볕 아래서도 말라 죽지 않는 강인한 생명력을 가진 애호박!<br>
+                        가격도 저렴하고 맛도 좋아 찌개류는 물론 전, 볶음 등 <br>
+                        다양한 요리에 많이 쓰이는데요. <br>
+                        <br>
+                        일상 속 친숙한 재료인 만큼 자주 사용할 일이 많은데, <br>
+                        애호박에 꽉 끼워진 비닐 때문에 불편할 때가 많죠? <br>
+                        비닐을 벗기다가 매번 중간에 끊어져서 <br>
+                        반복해서 또 가위질을 해야 하니까 번거로움이 만만치 않은데요.<br>
+                        <br>
+                        위험하지 않으면서 아주 쉽고 속시원하게 <br>
+                        애호박 비닐 벗기는 방법 알려 드릴게요~
+                    </p>
+                    <img src="../images/tip_test_img01.jpg" alt="게시물 이미지">
+                    <p>
+                        <br>
+                        여름철 뙤약볕 아래서도 말라 죽지 않는 강인한 생명력을 가진 애호박!<br>
+                        가격도 저렴하고 맛도 좋아 찌개류는 물론 전, 볶음 등 <br>
+                        다양한 요리에 많이 쓰이는데요. <br>
+                        <br>
+                        일상 속 친숙한 재료인 만큼 자주 사용할 일이 많은데, <br>
+                        애호박에 꽉 끼워진 비닐 때문에 불편할 때가 많죠? <br>
+                        비닐을 벗기다가 매번 중간에 끊어져서 <br>
+                        반복해서 또 가위질을 해야 하니까 번거로움이 만만치 않은데요.<br>
+                        <br>
+                        위험하지 않으면서 아주 쉽고 속시원하게 <br>
+                        애호박 비닐 벗기는 방법 알려 드릴게요~
+                    </p>
+                    <img src="../images/tip_test_img01.jpg" alt="게시물 이미지">
+                </div>
+                <div class="comm_detail_act">
+                    <div class="comm_act_btn">
+                        <button type="button" class="btn_share">공유하기</button>
+                    </div>
+                </div>
+                <div class="comm_detail_comment_write">
+                    <h4>댓글 <span class="font_red">2</span></h4>
+                    <div class="comm_box_write mt25 pa20">
+                        <textarea placeholder="댓글을 입력하세요"></textarea>
+                        <div class="write_info mt10">
+                            <p class="font_gray">0/500</p>
+                            <button type="button" class="comm_write_button btn_red">등록</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comm_detail_comment_list">
+                    <ul>
+                        <li>
+                            <div class="comm_box_list">
+                                <div class="info01">
+                                    <p class="name">자취요리어려웡</p>
+                                    <p class="font_gray">2024.04.13 09:00</p>
+                                    <a href="#" class="font_gray">수정</a>
+                                    <a href="#" class="font_gray">삭제</a>
+                                </div>
+                                <h5>
+                                    애호박 껍질이 항상 중간에서부터 안벗겨졌는데 이거 보고 쉽게 해결했어요! 꿀팁 감사합니다~  
+                                </h5>
+                            </div>
+                            <div class="comm_box_write">
+                                <textarea placeholder="댓글을 입력하세요">애호박 껍질이 항상 중간에서부터 안벗겨졌는데 이거 보고 쉽게 해결했어요! 꿀팁 감사합니다~ </textarea>
+                                <div class="write_info">
+                                    <p class="font_gray">0/500</p>
+                                    <div>
+                                        <button type="button" class="comm_write_button small_btn btn_white mr5">취소</button>
+                                        <button type="button" class="comm_write_button small_btn btn_red">수정</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="comm_box_list">
+                                <div class="info01">
+                                    <p class="name">자취요리어려웡</p>
+                                    <p class="font_gray">2024.04.13 09:00</p>
+                                    <a href="#" class="font_gray">수정</a>
+                                    <a href="#" class="font_gray">삭제</a>
+                                </div>
+                                <h5>
+                                    애호박 껍질이 항상 중간에서부터 안벗겨졌는데 이거 보고 쉽게 해결했어요! 꿀팁 감사합니다~  
+                                </h5>
+                            </div>
+                            <div class="comm_box_write" style="display: none;">
+                                <textarea placeholder="댓글을 입력하세요">애호박 껍질이 항상 중간에서부터 안벗겨졌는데 이거 보고 쉽게 해결했어요! 꿀팁 감사합니다~ </textarea>
+                                <div class="write_info">
+                                    <p class="font_gray">0/500</p>
+                                    <div>
+                                        <button type="button" class="comm_write_button small_btn btn_white">취소</button>
+                                        <button type="button" class="comm_write_button small_btn btn_red">수정</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="comm_detail_btn">
+                    <button type="button" class="btn_back">목록으로</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="d_none">푸터 영역</h2>
+            <div class="footer_top">
+                <ul>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <a href="../index.html" class="footer_logo"></a>
+                <address>
+                    <p>COPYRIGHT&copy; 2024 오늘뭐먹지? All rights reserved.</p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

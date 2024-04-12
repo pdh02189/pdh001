@@ -24,6 +24,8 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 .btn_white{background: #fff; color: #000; border: 1px solid #e2e5eb;}
 .font_red{color: #f95353;}
 .font_gray{color: #a0a3aa;}
+.mr5{margin-right: 5px;}
+
 
 
 /* 리스트 상단 */
@@ -95,6 +97,66 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
 .tab_content.hidden {display: none;}
 
+
+/* 상세페이지 공통 */
+.comm_detail_top{position: relative; width: 100%; margin-top: 25px;}
+
+.writer_btn_wrap{position: relative; width: 100%; display: flex; align-items: center; justify-content: flex-end; margin-bottom: 15px;}
+.writer_btn_wrap button{width: 60px; height: 30px; border-radius: 5px; font-size: 12px; font-weight: 600; background: #fff;}
+.writer_btn_wrap .btn_edit{border: 1px solid #000; color: #000;}
+.writer_btn_wrap .btn_del{border: 1px solid #f95353; color: #f95353; margin-left: 10px;}
+
+.comm_detail_tit{position: relative; width: 100%; display: flex; flex-direction: column; align-items: center; border-top: 1px solid #e2e5eb; border-bottom: 1px solid #e2e5eb; padding: 30px 20px;}
+.comm_detail_tit h4{font-size: 30px; font-weight: 600; margin-bottom: 15px; text-align: center;}
+.comm_detail_tit .tit_info{width: 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: center;}
+.comm_detail_tit .tit_info li{display: flex; align-items: center; font-size: 15px;}
+.comm_detail_tit .tit_info li:not(:first-child){margin-left: 8px;}
+.comm_detail_tit .tit_info li:not(:first-child)::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
+.comm_detail_tit .tit_info li p{display: flex; align-items: center; font-size: inherit; font-weight: inherit; color: inherit;}
+.comm_detail_tit .tit_info li.view p::before{content: ''; background: url(../images/ic_view.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+.comm_detail_tit .tit_info li.comment p::before{content: ''; background: url(../images/ic_comment.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+
+.comm_detail_con{position: relative; width: 100%; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;}
+.comm_detail_con p{width: 100%; font-size: 18px; text-align: center;}
+.comm_detail_con img{max-width: 70%; display: block; margin-top: 20px;}
+
+.comm_detail_act{position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 20px;}
+.comm_detail_act .comm_act_btn{position: relative; display: flex; border: 1px solid #e2e5eb; height: 60px; border-radius: 40px; align-items: center; overflow: hidden;}
+.comm_detail_act .comm_act_btn :not(:last-child)::after{content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 14px; margin-left: 8px; background-color: #eaeaea; display: flex;}
+.comm_detail_act .comm_act_btn button{position: relative; display: flex; align-items: center; padding: 0 25px; background: #fff; height: 100%; font-size: 16px; font-weight: 500;}
+.comm_detail_act .comm_act_btn button::before{content: '';display: inline-block;margin-right: 10px;width: 22px;height: 22px;}
+.comm_detail_act .comm_act_btn button.btn_share::before{background: url(../images/btn_share.png) center no-repeat; background-size: cover;}
+
+.comm_detail_comment_write{position: relative; width: 100%; margin-top: 40px;}
+.comm_detail_comment_write h4{font-size: 14px; font-weight: 600;}
+.comm_detail_comment_write h4 span{font-size: inherit; font-weight: 700;}
+.comm_box_write{position: relative; width: 100%; border: 1px solid #e2e5eb; background-color: #fff; padding: 20px; margin-top: 15px;}
+.comm_box_write textarea{width: 100%; border: 0; resize: none; height: 80px; font-size: 16px; outline: none;}
+.comm_box_write .write_info{position: relative;width: 100%;display: flex;align-items: flex-end;justify-content: space-between; margin-top: 10px;}
+.comm_box_write .write_info .comm_write_button{width: 80px; height: 45px; border-radius: 6px; font-size: 16px; font-weight: 600;}
+.comm_box_write .write_info .comm_write_button.small_btn{width: 66px; height: 40px; font-size: 15px};
+
+.comm_detail_comment_list,
+.comm_detail_comment_list ul
+.comm_detail_comment_list ul li{position: relative; width: 100%;}
+.comm_detail_comment_list ul li{padding: 25px 0;}
+.comm_detail_comment_list ul li:not(:first-child){border-top: 1px solid #e2e5eb;}
+
+.info01{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: wrap;}
+.info01 a,
+.info01 p{display: flex; align-items: center; font-size: 14px;}
+.info01 :not(:first-child){margin-left: 8px;}
+/* .info01 :not(:first-child){font-size: 13px;} */
+.info01 a::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
+
+.comm_box_list h5{width: 100%; margin-top: 10px; font-size: 16px;}
+
+
+.comm_detail_btn{position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 25px;}
+.comm_detail_btn .btn_back{width: 160px; height: 48px; font-size: 18px; font-weight: 500; border: 1px solid #e2e5eb; background: #fff; border-radius: 6px;}
+
+
+
 /* 페이징 형식 */
 
 /* 1~5
@@ -146,6 +208,11 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_list li:nth-child(3n){margin-right: 0px;}
 
     .tabs .tab{width: 140px; height: 44px; font-size: 14px;}
+
+    .comm_detail_tit,
+    .comm_detail_con{padding: 20px;}
+    .comm_detail_tit h4{font-size: 22px;}
+    .comm_box_write textarea{height: 65px;}
     
 }
 
@@ -170,6 +237,29 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
     .tabs .tab.m_w33{width: calc(100%/3); height: 40px; font-size: 13px;}
     .tabs .tab.m_w50{width: calc(100%/2); height: 40px; font-size: 13px;}
+
+    .writer_btn_wrap button{width: 48px; height: 26px;}
+    .writer_btn_wrap .btn_del{margin-left: 6px;}
+    .comm_detail_tit,
+    .comm_detail_con{padding: 20px 0;}
+    .comm_detail_top{margin-top: 20px;}
+    .comm_detail_tit h4{font-size: 18px; margin-bottom: 10px;}
+    .comm_detail_tit .tit_info li{font-size: 14px;}
+    .comm_detail_con p{font-size: 16px;}
+    .comm_detail_con img{max-width: 100%;}
+    .comm_detail_act{margin-top: 10px;}
+    .comm_detail_act .comm_act_btn{height: 46px;}
+    .comm_detail_act .comm_act_btn button{font-size: 14px;}
+    .comm_detail_act .comm_act_btn button::before{width: 16px; height: 16px; margin-right: 6px;}
+    .comm_detail_comment_write{margin-top: 25px;}
+    .comm_box_write{margin-top: 10px; padding: 12px;}
+    .comm_box_write textarea{font-size: 15px; height: 55px;}
+    .comm_box_write .write_info{margin-top: 6px;}
+    .comm_box_write .write_info .comm_write_button{width: 66px; height: 40px; font-size: 15px;}
+    .comm_box_write .write_info .comm_write_button.small_btn{width: 56px; height: 36px; font-size: 14px;}
+    .comm_detail_comment_list ul li{padding: 18px 0;}
+    .comm_box_list h5{font-size: 15px;}
+
 
     .paging1{margin-top: 40px;}
 }
