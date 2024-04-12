@@ -140,6 +140,7 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 .comm_detail_con{position: relative; width: 100%; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;}
 .comm_detail_con p{width: 100%; font-size: 18px; text-align: center;}
 .comm_detail_con img{max-width: 70%; display: block; margin-top: 20px;}
+.comm_detail_con :first-child{margin-top: 0;}
 
 .comm_detail_act{position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 20px;}
 .comm_detail_act .comm_act_btn{position: relative; display: flex; border: 1px solid #e2e5eb; height: 60px; border-radius: 40px; align-items: center; overflow: hidden;}
@@ -244,7 +245,7 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 @media (max-width: 600px){
     .popup_black .popup_white{min-height: 100vh; border-radius: 0;}
     .common_popup_wrap .common_popup{width: 100%;}
-    
+
     .comm_list_top .list_total p .mobile_none{display: none;}
     .comm_list_top .list_category li p input[type="radio"] + label {font-size: 14px; padding: 0 20px; height: 40px; border: 1px solid #e2e5eb; border-radius: 20px;}
     .comm_list_top .list_category li:not(:last-child) p {margin-right: 8px;}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘뭐먹지?</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="login admin"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 공유하기 팝업-->
+        <div class="share_popup" style="display: none;">
+            <div class="white_box">
+                <div class="popup_title">
+                    공유하기
+                    <a href="#" class="popup_close">
+                        <img src="../images/ic_popup_close.png" alt="닫기버튼">
+                    </a>
+                </div>
+                <div class="share_sns">
+                    <span>
+                        <a href="#">
+                            <img src="../images/ic_facebook2.png" alt="페이스북">
+                        </a>
+                        페이스북
+                    </span>
+                    <span>
+                        <a href="#">
+                            <img src="../images/ic_kakao2.png" alt="카카오톡">
+                        </a>
+                        카카오톡
+                    </span>
+                    <span>
+                        <a href="#">
+                            <img src="../images/ic_url.png" alt="url">
+                        </a>
+                        URL
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <header>
+            <h2 class="d_none">헤더 영역</h2>
+            <div class="header_inner">
+                <a href="../index.html" class="header_logo"></a>
+                <div class="search_box">
+                    <form>
+                        <fieldset>
+                            <legend class="d_none">검색</legend>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="my_wrap">
+                    <ul class="top">
+                        <li class="join">
+                            <a href="../join.html">회원가입</a>
+                        </li>
+                        <li class="login">
+                            <a href="../login.html">로그인</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                    <ul class="my">
+                        <li class="mypage">
+                            <a href="../mypage/myinfo.html">마이페이지</a>
+                        </li>
+                        <li class="cart">
+                            <a href="../mypage/cart.html">장바구니</a>
+                        </li>
+                        <li class="delivery">
+                            <a href="../mypage/delivery.html">배송조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <h3 class="d_none">글로벌 네비게이션 영역</h3>
+                <ul>
+                    <li>
+                        <a href="../store/index.html">스토어</a>
+                    </li>
+                    <li>
+                        <a href="../recipe/index.html">레시피</a>
+                    </li>
+                    <li>
+                        <a href="../cookingtip/index.html">요리 꿀팁</a>
+                    </li>
+                    <li>
+                        <a href="../ranking/index.html">랭킹</a>
+                    </li>
+                    <li class="on">
+                        <a href="../event/index.html">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="../store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="../recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="../cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="../ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="../event/index.html" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="../login.html" class="login btn_red">로그인</a>
+                                <a href="../join.html" class="join btn_white">회원가입</a>
+                                <a href="../mypage/myinfo.html" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m_dim"></div>
+
+        <main>
+            <h2 class="d_none">메인 영역</h2>
+            <div class="main_content">
+                <div class="sub_nav">
+                    <a href="../index.html" class="font_gray">홈</a>
+                    <a href="../event/index.html">이벤트</a>
+                </div>
+                <div class="comm_detail_top">
+                    <!-- 글쓴이만 보이는 버튼 -->
+                    <div class="writer_btn_wrap">
+                        <button type="button" class="btn_edit">수정</button>
+                        <button type="button" class="btn_del">삭제</button>
+                    </div>
+                    <div class="comm_detail_tit">
+                        <h4>신규 회원이라면 누구나 1만원 할인</h4>
+                        <ul class="tit_info">
+                            <li class="date font_gray"><p>2024.03.20 ~ 2024.05.16</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="comm_detail_con">
+                    <img src="../images/event_test_img03.jpg" alt="게시물 이미지">
+                    <p>
+                        <br>
+                        이벤트 상세페이지 글이 있을수도 없을수도 있음!~!!
+                    </p>
+                </div>
+        
+                <div class="comm_detail_btn">
+                    <button type="button" class="btn_back">목록으로</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="d_none">푸터 영역</h2>
+            <div class="footer_top">
+                <ul>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <a href="../index.html" class="footer_logo"></a>
+                <address>
+                    <p>COPYRIGHT&copy; 2024 오늘뭐먹지? All rights reserved.</p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
