@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘뭐먹지?</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/ranking.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="login admin"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <header>
+            <h2 class="d_none">헤더 영역</h2>
+            <div class="header_inner">
+                <a href="../index.html" class="header_logo"></a>
+                <div class="search_box">
+                    <form>
+                        <fieldset>
+                            <legend class="d_none">검색</legend>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="my_wrap">
+                    <ul class="top">
+                        <li class="join">
+                            <a href="../join.html">회원가입</a>
+                        </li>
+                        <li class="login">
+                            <a href="../login.html">로그인</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                    <ul class="my">
+                        <li class="mypage">
+                            <a href="../mypage/myinfo.html">마이페이지</a>
+                        </li>
+                        <li class="cart">
+                            <a href="../mypage/cart.html">장바구니</a>
+                        </li>
+                        <li class="delivery">
+                            <a href="../mypage/delivery.html">배송조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <h3 class="d_none">글로벌 네비게이션 영역</h3>
+                <ul>
+                    <li>
+                        <a href="../store/index.html">스토어</a>
+                    </li>
+                    <li>
+                        <a href="../recipe/index.html">레시피</a>
+                    </li>
+                    <li>
+                        <a href="../cookingtip/index.html">요리 꿀팁</a>
+                    </li>
+                    <li class="on">
+                        <a href="../ranking/index.html">랭킹</a>
+                    </li>
+                    <li>
+                        <a href="../event/index.html">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="../store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="../recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="../cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="../ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="../event/index.html" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="../login.html" class="login btn_red">로그인</a>
+                                <a href="../join.html" class="join btn_white">회원가입</a>
+                                <a href="../mypage/myinfo.html" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m_dim"></div>
+
+        <main>
+            <h2 class="d_none">메인 영역</h2>
+            <div class="main_content">
+                <div class="sub_nav">
+                    <a href="../index.html" class="font_gray">홈</a>
+                    <a href="../ranking/index.html">랭킹</a>
+                </div>
+                <div class="sub_tit">
+                    <h3>랭킹</h3>
+                </div>
+
+                <!-- 탭 -->
+                <div class="tabs tabs1">
+                    <button type="button" class="tab tab1 tab_active m_w50" data-id="0">레시피</span></button>
+                    <button type="button" class="tab tab1 non_active m_w50" data-id="1">검색어</span></button>
+                    <ul class="list_sort">
+                        <li>
+                            <p>
+                                <input type="radio" id="act01" name="act" checked="">
+                                <label for="act01">
+                                    <span></span>일간
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <input type="radio" id="act02" name="act">
+                                <label for="act02">
+                                    <span></span>주간
+                                </label>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <input type="radio" id="act03" name="act">
+                                <label for="act03">
+                                    <span></span>월간
+                                </label>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 레시피 -->
+                <div class="tab_content tab_content1" data-id="0">
+                    <ul class="comm_list">
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num top3">1</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img01.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">매콤 된장찌개, 채소와 두부만 넣은 초간단 초스피드 된장찌개</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num top3">2</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img02.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">파김치 황금레시피, 파김치 담그는 법</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num top3">3</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img03.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">절대 실패없는 제육볶음 황금레시피 감칠맛과 매운맛이 좋아요~!!</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">4</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img04.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">마지막 한 젓가락까지 바삭하고 고소한 간장 멸치볶음(아이밑반찬,간단반찬) </p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">5</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img01.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">매콤 된장찌개, 채소와 두부만 넣은 초간단 초스피드 된장찌개</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">6</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img02.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">파김치 황금레시피, 파김치 담그는 법</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">7</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img03.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">절대 실패없는 제육볶음 황금레시피 감칠맛과 매운맛이 좋아요~!!</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">8</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img04.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">마지막 한 젓가락까지 바삭하고 고소한 간장 멸치볶음(아이밑반찬,간단반찬) </p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">9</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img01.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">매콤 된장찌개, 채소와 두부만 넣은 초간단 초스피드 된장찌개</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">10</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img02.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">파김치 황금레시피, 파김치 담그는 법</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">11</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img03.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">절대 실패없는 제육볶음 황금레시피 감칠맛과 매운맛이 좋아요~!!</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">12</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img04.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">마지막 한 젓가락까지 바삭하고 고소한 간장 멸치볶음(아이밑반찬,간단반찬) </p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">13</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img01.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">매콤 된장찌개, 채소와 두부만 넣은 초간단 초스피드 된장찌개</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">14</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img02.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">파김치 황금레시피, 파김치 담그는 법</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">15</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img03.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">절대 실패없는 제육볶음 황금레시피 감칠맛과 매운맛이 좋아요~!!</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">16</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img04.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">마지막 한 젓가락까지 바삭하고 고소한 간장 멸치볶음(아이밑반찬,간단반찬) </p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">17</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img01.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">매콤 된장찌개, 채소와 두부만 넣은 초간단 초스피드 된장찌개</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">18</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img02.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">파김치 황금레시피, 파김치 담그는 법</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">19</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img03.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">절대 실패없는 제육볶음 황금레시피 감칠맛과 매운맛이 좋아요~!!</p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../recipe/detail.html">
+                                <span class="ranking_num">20</span>
+                                <div class="list_img">
+                                    <img src="../images/recipe_test_img04.jpg" alt="레시피 대표 이미지">
+                                </div>
+                                <div class="list_txt">
+                                    <p class="list_tit txt_cut2">마지막 한 젓가락까지 바삭하고 고소한 간장 멸치볶음(아이밑반찬,간단반찬) </p>
+                                    <div class="list_info">
+                                        <span class="name">요리조아</span>
+                                        <span class="date font_gray">2024.03.23</span>
+                                    </div>
+                                    <div class="list_ic">
+                                        <span class="view font_gray">24</span>
+                                        <span class="heart font_gray">11</span>
+                                        <span class="comment font_gray">2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 검색어 -->
+                <div class="tab_content tab_content1 hidden" data-id="1">
+                    <ul class="keyword_list">
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num top3">1</span>
+                                <p class="list_txt">오이무침</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num top3">2</span>
+                                <p class="list_txt">제육볶음</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num top3">3</span>
+                                <p class="list_txt">닭볶음탕</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">4</span>
+                                <p class="list_txt">두부조림</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">5</span>
+                                <p class="list_txt">김치찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">6</span>
+                                <p class="list_txt">순두부찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">7</span>
+                                <p class="list_txt">오이무침</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">8</span>
+                                <p class="list_txt">제육볶음</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">9</span>
+                                <p class="list_txt">닭볶음탕</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">10</span>
+                                <p class="list_txt">두부조림</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">11</span>
+                                <p class="list_txt">김치찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">12</span>
+                                <p class="list_txt">순두부찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">13</span>
+                                <p class="list_txt">오이무침</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">14</span>
+                                <p class="list_txt">제육볶음</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">15</span>
+                                <p class="list_txt">닭볶음탕</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">16</span>
+                                <p class="list_txt">두부조림</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">17</span>
+                                <p class="list_txt">김치찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">18</span>
+                                <p class="list_txt">순두부찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">19</span>
+                                <p class="list_txt">김치찌개</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../searchresult.html">
+                                <span class="ranking_num">20</span>
+                                <p class="list_txt">순두부찌개</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="d_none">푸터 영역</h2>
+            <div class="footer_top">
+                <ul>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <a href="../index.html" class="footer_logo"></a>
+                <address>
+                    <p>COPYRIGHT&copy; 2024 오늘뭐먹지? All rights reserved.</p>
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

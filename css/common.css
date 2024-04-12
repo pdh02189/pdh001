@@ -144,6 +144,9 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_list li:nth-child(4n){margin-right: 20px;}
     .comm_list li:nth-child(-n + 3){margin-top: 0px;}
     .comm_list li:nth-child(3n){margin-right: 0px;}
+
+    .tabs .tab{width: 140px; height: 44px; font-size: 14px;}
+    
 }
 
 /* 미디어쿼리 600 */
@@ -164,6 +167,10 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_list li a .list_txt .list_info{margin-top: 6px;}
     .comm_list li a .list_txt .list_info .name,
     .comm_list li a .list_txt .list_info .date{font-size: 14px;}
+
+    .tabs .tab.m_w33{width: calc(100%/3); height: 40px; font-size: 13px;}
+    .tabs .tab.m_w50{width: calc(100%/2); height: 40px; font-size: 13px;}
+
     .paging1{margin-top: 40px;}
 }
 
