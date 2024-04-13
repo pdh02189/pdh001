@@ -120,7 +120,7 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
 
 /* 상세페이지 공통 */
-.comm_detail_top{position: relative; width: 100%; margin-top: 25px;}
+.comm_detail_top{position: relative; display: flex; flex-wrap: wrap; width: 100%; margin-top: 25px;}
 
 .writer_btn_wrap{position: relative; width: 100%; display: flex; align-items: center; justify-content: flex-end; margin-bottom: 15px;}
 .writer_btn_wrap button{width: 60px; height: 30px; border-radius: 5px; font-size: 12px; font-weight: 600; background: #fff;}
@@ -168,7 +168,6 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 .info01 a,
 .info01 p{display: flex; align-items: center; font-size: 14px;}
 .info01 :not(:first-child){margin-left: 8px;}
-/* .info01 :not(:first-child){font-size: 13px;} */
 .info01 a::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
 
 .comm_box_list h5{width: 100%; margin-top: 10px; font-size: 16px;}

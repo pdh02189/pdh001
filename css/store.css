@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+.store_detail_left{position: relative; width: calc(50% - 50px); }
+.store_detail_left img{width: 100%;}
+
+.store_detail_right{position: relative; width: 50%; margin-left: 50px;}
+
+.store_detail_tit{position: relative; width: 100%; margin-bottom: 30px;}
+.store_detail_tit h4{font-size: 30px; font-weight: 600;}
+.store_detail_tit .price{font-size: 36px; font-weight: 700; margin: 15px 0;}
+.store_detail_tit .review{width: 100%; display: flex; flex-wrap: wrap; align-items: center;}
+.store_detail_tit .review .img{width: 16px; height: 15px; margin-right: 5px; background: url(../images/ic_star.png) center no-repeat; background-size: cover;}
+.store_detail_tit .review .score{font-size: 15px; color: #000; font-weight: 400;}
+.store_detail_tit .review .cnt{font-size: 15px; margin-left: 3px; font-weight: 400;}
+
+.store_detail_info{position: relative; width: 100%; border-top: 1px solid #e2e5eb; border-bottom: 1px solid #e2e5eb; padding: 25px 0; margin-bottom: 30px;}
+.store_detail_info li{position: relative; width: 100%;}
+.store_detail_info li:not(:first-child){margin-top: 15px;}
+.store_detail_info li .info_li{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: wrap; font-size: 15px; font-weight: 500;}
+.store_detail_info li .info_li span:first-child{width: 100px;}
+.store_detail_info li .info_li span:last-child{width: calc(100% - 100px);}
+.store_detail_info li .info_li .item_qty{position: relative; display: flex; align-items: center; width: 117px; height: 42px; border-radius: 3px; border: 1px solid #e2e5eb; overflow: hidden;}
+.store_detail_info li .info_li .item_qty .item_qty_count{border: 0; width: 115px; padding: 0 40px;font-size: 15px;line-height: 40px;text-align: center;;overflow: hidden;}
+.store_detail_info li .info_li .item_qty button{position: absolute; top: 0;}
+.store_detail_info li .info_li .item_qty .minus{width: 40px; height: 40px; background: url(../images/ic_minus.png) center no-repeat; left: 0;}
+.store_detail_info li .info_li .item_qty .plus{width: 40px; height: 40px; background: url(../images/ic_plus.png) center no-repeat; right: 0;}
+
+
+.store_detail_total{position: relative; width: 100%;}
+.store_detail_total .price{font-size: 20px; font-weight: 700; display: flex; align-items: center;}
+.store_detail_total .price span{font-size: 34px; margin-left: 18px;}
+
+.store_detail_total .store_btn_wrap{position: relative; width: 100%; margin-top: 30px; display: flex; flex-wrap: wrap;}
+.store_detail_total .store_btn_wrap button{height: 60px; border-radius: 6px; font-size: 18px; font-weight: 600;}
+.store_detail_total .store_btn_wrap button:first-child{width: 40%;}
+.store_detail_total .store_btn_wrap button:last-child{width: calc(60% - 10px); margin-left: 10px;}
+
+
+.comm_detail_con_tit{position: relative; width: 100%; margin-top: 40px;}
+.comm_detail_con_tit .cont_tit{position: relative; width: 100%; border-bottom: 1px solid #000;}
+.comm_detail_con_tit .cont_tit h4{font-size: 14px; font-weight: 600; margin-bottom: 10px;}
+.comm_detail_con_tit .cont_tit h4 span{font-size: inherit; font-weight: 700;}
+
+
+.reviw_list{position: relative; width: 100%;}
+.reviw_list li{position: relative; width: 100%;padding: 25px 0; border-bottom: 1px solid #e2e5eb;}
+.reviw_list li .review_star{width: 100%; display: flex; margin-bottom: 5px;}
+.reviw_list li .review_star .review_star_bg{display: inline-block; background: url(../images/ic_star_off.png) 1px center no-repeat; background-size: 90px; width: 87px;}
+.reviw_list li .review_star .review_star_bg .review_star_on{background: url(../images/ic_star_on.png) 1px center no-repeat; background-size: 90px; height: 100%; display: block;}
+.reviw_list li .review_star .review_score{margin-left: 5px; font-size: 14px;}
+.reviw_list li h5{width: 100%; margin-top: 10px; font-size: 16px;}
+
+
+/* 미디어쿼리 1024 */
+@media (max-width: 1024px){
+    
+}
+
+
+/* 미디어쿼리 900 */
+@media (max-width: 900px){
+    .store_detail_tit,
+    .store_detail_info{margin-bottom: 25px;}
+    .store_detail_info{padding: 20px 0;}
+    .store_detail_tit h4{font-size: 22px;}
+    .store_detail_tit .price{font-size: 30px; margin: 10px 0;}
+    .store_detail_total .price span{font-size: 30px;}
+    .store_detail_total .store_btn_wrap{margin-top: 25px;}
+}
+
+/* 미디어쿼리 750 */
+@media (max-width: 750px){
+    .store_detail_left,
+    .store_detail_right{width: 100%;}
+    .store_detail_right{margin-left: 0; margin-top: 10px;}
+}
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .store_detail_tit,
+    .store_detail_info{margin-bottom: 20px;}
+    .store_detail_tit h4{font-size: 18px;}
+    .store_detail_tit .price{font-size: 22px; margin: 8px 0;}
+    .store_detail_total .price span{font-size: 22px;}
+    .store_detail_total .store_btn_wrap button{height: 42px; font-size: 16px;}
+
+    .comm_detail_con_tit{margin-top: 20px;}
+    .reviw_list li{padding: 18px 0;}
+    .reviw_list li h5{font-size: 15px;}
+}
