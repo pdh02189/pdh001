@@ -3,9 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>오늘뭐먹지?</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/store.css">
+    <link rel="stylesheet" href="../summernote/summernote-lite.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="../script/main.js"></script>
+    <script src="../summernote/summernote-lite.js"></script>
+    <script src="../summernote/summernote-ko-KR.js"></script>
 </head>
 <body>
-    
+    <div id="wrapper" class="login admin"> <!-- 로그인 시 login 관리자 로그인 시 admin 클래스 붙음 -->
+        <!-- 모바일 검색 팝업 -->
+        <div class="m_search_popup">
+            <div class="m_search_popup_inner">
+                <form>
+                    <fieldset>
+                        <legend class="d_none">검색</legend>
+                        <input type="text" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <header>
+            <h2 class="d_none">헤더 영역</h2>
+            <div class="header_inner">
+                <a href="../index.html" class="header_logo"></a>
+                <div class="search_box">
+                    <form>
+                        <fieldset>
+                            <legend class="d_none">검색</legend>
+                            <input type="text" placeholder="검색어를 입력하세요">
+                            <button type="button" class="btn_search" onclick="location.href='../searchresult.html'">검색</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="my_wrap">
+                    <ul class="top">
+                        <li class="join">
+                            <a href="../join.html">회원가입</a>
+                        </li>
+                        <li class="login">
+                            <a href="../login.html">로그인</a>
+                        </li>
+                        <li class="logout">
+                            <a href="#">로그아웃</a>
+                        </li>
+                    </ul>
+                    <ul class="my">
+                        <li class="mypage">
+                            <a href="../mypage/myinfo.html">마이페이지</a>
+                        </li>
+                        <li class="cart">
+                            <a href="../mypage/cart.html">장바구니</a>
+                        </li>
+                        <li class="delivery">
+                            <a href="../mypage/delivery.html">배송조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile_menu">
+                    <div class="search_btn"></div>
+                    <div class="header_btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav class="gnb">
+                <h3 class="d_none">글로벌 네비게이션 영역</h3>
+                <ul>
+                    <li class="on">
+                        <a href="../store/index.html">스토어</a>
+                    </li>
+                    <li>
+                        <a href="../recipe/index.html">레시피</a>
+                    </li>
+                    <li>
+                        <a href="../cookingtip/index.html">요리 꿀팁</a>
+                    </li>
+                    <li>
+                        <a href="../ranking/index.html">랭킹</a>
+                    </li>
+                    <li>
+                        <a href="../event/index.html">이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile_menu">
+                <div class="side_menu">
+                    <div class="menu_wrap">
+                        <ul class="menu_list">
+                            <li>
+                                <a href="../store/index.html" class="menu_depth1">스토어</a>
+                            </li>
+                            <li>
+                                <a href="../recipe/index.html" class="menu_depth1">레시피</a>
+                            </li>
+                            <li>
+                                <a href="../cookingtip/index.html" class="menu_depth1">요리 꿀팁</a>
+                            </li>
+                            <li>
+                                <a href="../ranking/index.html" class="menu_depth1">랭킹</a>
+                            </li>
+                            <li>
+                                <a href="../event/index.html" class="menu_depth1">이벤트</a>
+                            </li>
+                            <li class="btn_zone">
+                                <a href="../login.html" class="login btn_red">로그인</a>
+                                <a href="../join.html" class="join btn_white">회원가입</a>
+                                <a href="../mypage/myinfo.html" class="mypage btn_red">마이페이지</a>
+                                <a href="#" class="logout btn_white">로그아웃</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="m_dim"></div>
+
+        <main>
+            <h2 class="d_none">메인 영역</h2>
+            <div class="main_content">
+                <div class="sub_nav">
+                    <a href="../index.html" class="font_gray">홈</a>
+                    <a href="../store/index.html">스토어</a>
+                </div>
+                <div class="write_box">
+                    <form>
+                        <div class="write_tit">
+                            <p>표시는 반드시 입력하셔야 합니다.</p>
+                        </div>
+                        <div class="comm_write_con">
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3 class="important">카테고리</h3>
+                                </div>
+                                <div class="cont_box">
+                                    <select class="w220">
+                                        <option value="0">카테고리 선택</option>
+                                        <option value="1">신선식품</option>
+                                        <option value="2">간편식</option>
+                                        <option value="3">가공식품</option>
+                                        <option value="4">주방용품</option>
+                                        <option value="5">주방가전</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3 class="important">상품명</h3>
+                                </div>
+                                <div class="cont_box">
+                                    <input type="text" class="w700" placeholder="상품명을 입력하세요">
+                                </div>
+                            </div>
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3 class="important">판매금액</h3>
+                                </div>
+                                <div class="cont_box nowrap">
+                                    <input type="text" class="w390">
+                                    <span class="font_gray ml10">원</span>
+                                </div>
+                            </div>
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3>배송비</h3>
+                                </div>
+                                <div class="cont_box nowrap">
+                                    <input type="text" class="w390">
+                                    <span class="font_gray ml10">원 (미입력 시 무료배송)</span>
+                                </div>
+                            </div>
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3 class="important">상품 상세정보</h3>
+                                </div>
+                                <div class="cont_box">
+                                    <textarea id="summernote" class="summernote_txt w100p">
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="comm_write_box">
+                                <div class="tit_box">
+                                    <h3 class="important">상품 대표사진</h3>
+                                </div>
+                                <div class="cont_box">
+                                    <div class="imgBox">
+                                        <input class="upload-photo" value="" placeholder="">
+                                        <label for="imageSelector">
+                                            <img src="../images/ic_cam.png" alt="사진 첨부">
+                                            사진 첨부
+                                        </label>
+                                        <div class="thumb">
+                                            <img src="">
+                                            <button type="button" class="dellink"></button>
+                                        </div>
+                                        <input type="file" id="imageSelector" name="imageSelector" accept="image/jpeg, image/jpg, image/png" multiple="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comm_write_btn_wrap">
+                            <button type="button" class="btn_white">취소</button>
+                            <button type="submit" class="btn_red">등록</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <h2 class="d_none">푸터 영역</h2>
+            <div class="footer_top">
+                <ul>
+                    <li>
+                        <a href="#">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_inner">
+                <a href="../index.html" class="footer_logo"></a>
+                <address>
+                    <p>COPYRIGHT&copy; 2024 오늘뭐먹지? All rights reserved.</p>
+                </address>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

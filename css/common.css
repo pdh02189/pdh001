@@ -30,12 +30,16 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 .btn_white{background: #fff; color: #000; border: 1px solid #e2e5eb;}
 .font_red{color: #f95353;}
 .font_gray{color: #a0a3aa;}
+.nowrap{flex-wrap: nowrap !important;}
 .ml10{margin-left: 10px;}
 .mr5{margin-right: 5px;}
 .mr10{margin-right: 10px;}
 .w100{width: 100px;}
+.w100p{width: 100%;}
+.w220{width: 220px;}
 .w390{width: 390px;}
 .w500{width: 500px;}
+.w700{width: 700px;}
 
 /* 공유하기 팝업 */
 .share_popup {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.5);z-index: 2000;}
@@ -201,6 +205,12 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 
 
 /* 등록폼 공통 */
+.write_box,
+.write_box form{position: relative; width: 100%;}
+.write_tit{width: 100%; position: relative; width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 20px;}
+.write_tit p{font-size: 14px; display: flex; align-items: center; margin-left: auto;}
+.write_tit p::before {content: '';display: block;width: 4px;height: 4px;float: left;margin-right: 6px;background-color: #ff3d44 ;}
+
 .comm_write_con{width: 100%;display: flex;flex-wrap: wrap; border-top: 1px solid #000;}
 .comm_write_con .comm_write_box{position: relative;display: flex;flex-wrap: wrap;align-items: flex-start;box-sizing: border-box;width: 100%;padding: 20px 0;border-bottom: 1px solid #e2e5eb;}
 .comm_write_con .comm_write_box .tit_box{width: 200px; height: 100%;}
@@ -212,7 +222,7 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 .comm_write_con .comm_write_box .cont_box input[type=number],
 .comm_write_con .comm_write_box .cont_box input[type=date],
 .comm_write_con .comm_write_box .cont_box select,
-.comm_write_con .comm_write_box .cont_box input[type=password]{position: relative; height: 48px; font-size: 16px; border: 1px solid #e2e5eb; border-radius: 6px; background: #fff; padding: 0 20px;}
+.comm_write_con .comm_write_box .cont_box input[type=password]{position: relative; height: 48px; font-size: 16px; border: 1px solid #e2e5eb; border-radius: 6px; background: #fff; padding: 0 20px; outline: none;}
 .comm_write_con .comm_write_box .cont_box span{font-size: 15px; font-weight: 400;}
 .comm_write_con .comm_write_box .cont_box span.idcheck,
 .comm_write_con .comm_write_box .cont_box span.pwcheck{width: 100%; margin-top: 10px;}
@@ -221,6 +231,10 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 .comm_write_con .comm_write_box .cont_box .address > :not(:first-child){margin-top: 10px;}
 .comm_write_con .comm_write_box .cont_box .address .address_box{display: flex; flex-wrap: wrap;}
 .comm_write_con .comm_write_box .cont_box .address .address_box button{height: 48px; border-radius: 6px; margin-left: 10px; border: 1px solid #000; background: #fff;}
+.comm_write_con .comm_write_box .cont_box .note-editor{width: 100%;}
+.comm_write_btn_wrap{position: relative; width: 100%; margin-top: 50px; display: flex; justify-content: center;}
+.comm_write_btn_wrap button{width: 200px; height: 60px; border-radius: 6px; font-size: 16px; font-weight: 600;}
+.comm_write_btn_wrap button:nth-child(even){margin-left: 20px;}
 
 /* 라디오 */
 .comm_write_con .comm_write_box .cont_box .state {position: relative;padding-top: 11px;}
@@ -232,6 +246,17 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 .comm_write_con .comm_write_box .cont_box .state [type="radio"]:checked ~ span {color: #000;}
 .comm_write_con .comm_write_box .cont_box .state [type="radio"]:disabled {background-color: lightgray;box-shadow: none;opacity: 0.7;cursor: not-allowed;}
 .comm_write_con .comm_write_box .cont_box .state [type="radio"]:disabled + span {opacity: 0.7;cursor: not-allowed;}
+/*사진첨부*/
+.comm_write_box .cont_box .imgBox {position: relative; width: 120px;height: 120px;}
+.comm_write_box .cont_box .imgBox .upload-photo {display: none;}
+.comm_write_box .cont_box .imgBox input[type="file"] {position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;}
+.comm_write_box .cont_box .imgBox label {position: relative;box-sizing: border-box;width: 100%;color: #a0a3aa;vertical-align: middle;background-color: #fff;cursor: pointer;height: 120px;width: 120px;border: 2px dashed #dedede;display: flex;flex-direction: column;align-items: center;justify-content: center;flex-wrap: wrap;}
+.comm_write_box .cont_box .imgBox label img {margin-bottom: 5px;}
+.comm_write_box .cont_box .imgBox label span {color: #a0a3aa;font-size: 13px;}
+.comm_write_box .cont_box .imgBox .thumb{display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;background: #fff;border: 2px dashed #dedede;}
+.comm_write_box .cont_box .imgBox .thumb img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;margin: auto;}
+.comm_write_box .cont_box .imgBox .thumb .dellink{position: absolute;box-sizing: border-box;width: 12px;height: 12px;background: url(../images/ic_popup_close.png) center no-repeat;top: 12px;right: 12px;}
+
 
 /* 페이징 형식 */
 
@@ -357,6 +382,7 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 
     .comm_detail_con_tit{margin-top: 20px;}
 
+    .write_tit{margin-bottom: 15px;}
     .comm_write_con .comm_write_box .tit_box{width: 100%; height: auto;}
     .comm_write_con .comm_write_box .tit_box h3{margin: 0; font-size: 14px;}
     .comm_write_con .comm_write_box .tit_box h3::before{margin-right: 0;}
@@ -369,7 +395,11 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
     .comm_write_con .comm_write_box .cont_box input[type=password]{height: 44px; font-size: 15px; padding: 0 15px;}
 
     .comm_write_con .comm_write_box .cont_box .state {padding-top: 0;}
-    
+
+    .comm_write_con .comm_write_box .cont_box .note-editor{height: 400px;}
+    .comm_write_btn_wrap{margin-top: 30px;}
+    .comm_write_btn_wrap button{width: calc(50% - 5px);height: 42px;font-size: 16px;}
+    .comm_write_btn_wrap button:nth-child(even){margin-left: 10px;}
     .paging1{margin-top: 40px;}
 }
 
