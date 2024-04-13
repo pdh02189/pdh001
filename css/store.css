@@ -37,11 +37,6 @@
 .store_detail_total .store_btn_wrap button:last-child{width: calc(60% - 10px); margin-left: 10px;}
 
 
-.comm_detail_con_tit{position: relative; width: 100%; margin-top: 40px;}
-.comm_detail_con_tit .cont_tit{position: relative; width: 100%; border-bottom: 1px solid #000;}
-.comm_detail_con_tit .cont_tit h4{font-size: 14px; font-weight: 600; margin-bottom: 10px;}
-.comm_detail_con_tit .cont_tit h4 span{font-size: inherit; font-weight: 700;}
-
 
 .reviw_list{position: relative; width: 100%;}
 .reviw_list li{position: relative; width: 100%;padding: 25px 0; border-bottom: 1px solid #e2e5eb;}
@@ -83,7 +78,6 @@
     .store_detail_total .price span{font-size: 22px;}
     .store_detail_total .store_btn_wrap button{height: 42px; font-size: 16px;}
 
-    .comm_detail_con_tit{margin-top: 20px;}
     .reviw_list li{padding: 18px 0;}
     .reviw_list li h5{font-size: 15px;}
 }

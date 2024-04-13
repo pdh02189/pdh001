@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.recipe_detail_left{position: relative; width: calc(45% - 50px); }
+.recipe_detail_left img{width: 100%;}
+
+.recipe_detail_right{position: relative; width: 55%; margin-left: 50px;}
+
+.recipe_detail_tit{position: relative; width: 100%;}
+.recipe_tit_info{width: 100%; padding-bottom: 10px; margin-bottom: 20px; border-bottom: 1px solid #e2e5eb; display: flex; align-items: center; justify-content: space-between;}
+.recipe_tit_info .list_info{display: flex; flex-wrap: wrap; align-items: center; margin-top: 10px;}
+.recipe_tit_info .list_info .name{font-size: 15px; color: #000; font-weight: 500;}
+.recipe_tit_info .list_info .date{display: flex; align-items: center; font-size: 15px; font-weight: 400; margin-left: 8px;}
+.recipe_tit_info .list_info .date::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
+
+.recipe_tit_info .list_ic{display: flex; flex-wrap: wrap; align-items: center; margin-top: 8px;}
+.recipe_tit_info .list_ic span{font-size: 14px; display: flex; align-items: center;}
+.recipe_tit_info .list_ic .heart,
+.recipe_tit_info .list_ic .comment{margin-left: 15px;}
+.recipe_tit_info .list_ic .view::before{content: ''; background: url(../images/ic_view.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+.recipe_tit_info .list_ic .heart::before{content: ''; background: url(../images/ic_heart.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+.recipe_tit_info .list_ic .comment::before{content: ''; background: url(../images/ic_comment.png) center no-repeat; display: flex; width: 15px; height: 15px; margin-right: 5px;}
+
+.recipe_detail_tit h4{font-size: 30px; font-weight: 600;}
+.recipe_detail_tit .tit_txt{padding: 20px 0 30px; font-size: 16px;}
+.recipe_detail_tit .list_info2{position: relative; display: flex; align-items: center; flex-wrap: wrap;}
+.recipe_detail_tit .list_info2 li{display: flex; align-items: center; flex-wrap: wrap;}
+.recipe_detail_tit .list_info2 li:not(:last-child) {margin-right: 40px;}
+.recipe_detail_tit .list_info2 li span{display: flex; align-items: center; flex-wrap: wrap;}
+.recipe_detail_tit .list_info2 li span:first-child{margin-right: 8px;}
+.recipe_detail_tit .list_info2 li span:last-child::before{content: ''; width: 1px; height: 10px; margin-right: 8px; background-color: #eaeaea; display: flex;}
+
+.ingredient{position: relative; width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 50px;}
+.ingredient li{width: calc(100%/2 - 40px/2); margin-top: 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;}
+.ingredient li:nth-child(even){margin-left: 40px;}
+.ingredient li span{font-size: 16px;}
+
+.steps{position: relative; width: 100%; display: flex; flex-wrap: wrap; margin-top: 30px;}
+.steps .step_txt{width: calc(100% - 400px); margin-right: 100px; margin-top: 10px;}
+.steps.noimg .step_txt{width: 100%; margin-right: 0;}
+.steps .step_txt span{width: 100%; font-size: 26px; font-weight: 600;}
+.steps .step_txt p{width: 100%; font-size: 20px; margin-top: 15px; line-height: 1.8;}
+.steps .step_img{width: 300px;}
+.steps.noimg .step_img{display: none;}
+.steps .step_img img{width: 100%;}
+
+
+
+/* 미디어쿼리 900 */
+@media (max-width: 900px){
+    .recipe_detail_tit h4{font-size: 22px;}
+    .recipe_detail_tit .tit_txt{padding: 15px 0 20px;}
+
+    .steps .step_txt{width: calc(100% - 260px); margin-right: 40px; margin-top: 10px;}
+    .steps .step_txt span{font-size: 22px;}
+    .steps .step_txt p{font-size: 16px;}
+    .steps .step_img{width: 220px;}
+}
+
+/* 미디어쿼리 750 */
+@media (max-width: 750px){
+    .recipe_detail_left,
+    .recipe_detail_right{width: 100%;}
+    .recipe_detail_right{margin-left: 0; margin-top: 10px;}
+}
+
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .recipe_detail_tit h4{font-size: 18px;}
+    .recipe_detail_tit .tit_txt{font-size: 15px;}
+    .recipe_detail_tit .tit_txt{padding: 10px 0 15px;}
+    .recipe_detail_tit .list_info2 li:not(:last-child){margin-right: 15px;}
+    .recipe_detail_tit .list_info2 li span{font-size: 14px;}
+
+    .ingredient{margin-bottom: 20px;}
+    .ingredient li{width: 100%; margin-top: 15px;}
+    .ingredient li:nth-child(even){margin-left: 0;}
+    .ingredient li span{font-size: 15px;}
+
+    .steps{margin-top: 20px;}
+    .steps .step_txt{width: 100%; margin: 0;}
+    .steps .step_img{width: 100%; margin-top: 15px;}
+}

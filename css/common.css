@@ -145,6 +145,12 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 .comm_detail_act{position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 20px;}
 .comm_detail_act .comm_act_btn{position: relative; display: flex; border: 1px solid #e2e5eb; height: 60px; border-radius: 40px; align-items: center; overflow: hidden;}
 .comm_detail_act .comm_act_btn :not(:last-child)::after{content: ''; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 14px; margin-left: 8px; background-color: #eaeaea; display: flex;}
+.comm_detail_act .comm_act_btn p {position: relative;padding: 0 25px; height: 100%; display: flex; align-items: center;}
+.comm_detail_act .comm_act_btn p input[type="checkbox"] {display:none;}
+.comm_detail_act .comm_act_btn p label{font-size: 16px; font-weight: 500;}
+.comm_detail_act .comm_act_btn p input[type="checkbox"] + label {color:#000;font-size: 16px;display: flex;align-items: center;cursor: pointer;}
+.comm_detail_act .comm_act_btn p input[type="checkbox"] + label span {display: inline-block;margin-right: 10px;width: 22px;height: 22px;background: url(../images/btn_noheart.png)50% 50% no-repeat;background-size: cover;cursor: pointer;}
+.comm_detail_act .comm_act_btn p input[type="checkbox"]:checked + label span {background: url(../images/btn_heart.png)50% 50% no-repeat;background-size: cover;}
 .comm_detail_act .comm_act_btn button{position: relative; display: flex; align-items: center; padding: 0 25px; background: #fff; height: 100%; font-size: 16px; font-weight: 500;}
 .comm_detail_act .comm_act_btn button::before{content: '';display: inline-block;margin-right: 10px;width: 22px;height: 22px;}
 .comm_detail_act .comm_act_btn button.btn_share::before{background: url(../images/btn_share.png) center no-repeat; background-size: cover;}
@@ -175,6 +181,12 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
 
 .comm_detail_btn{position: relative; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 25px;}
 .comm_detail_btn .btn_back{width: 160px; height: 48px; font-size: 18px; font-weight: 500; border: 1px solid #e2e5eb; background: #fff; border-radius: 6px;}
+
+
+.comm_detail_con_tit{position: relative; width: 100%; margin-top: 40px;}
+.comm_detail_con_tit .cont_tit{position: relative; width: 100%; border-bottom: 1px solid #000;}
+.comm_detail_con_tit .cont_tit h4{font-size: 14px; font-weight: 600; margin-bottom: 10px;}
+.comm_detail_con_tit .cont_tit h4 span{font-size: inherit; font-weight: 700;}
 
 
 
@@ -276,7 +288,9 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_detail_con img{max-width: 100%;}
     .comm_detail_act{margin-top: 10px;}
     .comm_detail_act .comm_act_btn{height: 46px;}
-    .comm_detail_act .comm_act_btn button{font-size: 14px;}
+    .comm_detail_act .comm_act_btn p label,
+    .comm_detail_act .comm_act_btn button{font-size: 14px !important;}
+    .comm_detail_act .comm_act_btn p input[type="checkbox"] + label span,
     .comm_detail_act .comm_act_btn button::before{width: 16px; height: 16px; margin-right: 6px;}
     .comm_detail_comment_write{margin-top: 25px;}
     .comm_box_write{margin-top: 10px; padding: 12px;}
@@ -288,6 +302,8 @@ input[type="checkbox"]:checked { border: 1px solid #f95353; background: url(../i
     .comm_box_list h5{font-size: 15px;}
     .comm_detail_btn{margin-top: 10px;}
     .comm_detail_btn .btn_back{width: 120px; height: 42px; font-size: 16px;}
+
+    .comm_detail_con_tit{margin-top: 20px;}
 
     .paging1{margin-top: 40px;}
 }
