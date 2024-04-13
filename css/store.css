@@ -78,8 +78,6 @@
 
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
-    .store_detail_tit,
-    .store_detail_info{margin-bottom: 20px;}
     .store_detail_tit h4{font-size: 18px;}
     .store_detail_tit .price{font-size: 22px; margin: 8px 0;}
     .store_detail_total .price span{font-size: 22px;}
