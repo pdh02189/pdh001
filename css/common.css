@@ -231,7 +231,7 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
 .comm_write_con .comm_write_box .cont_box .address > :not(:first-child){margin-top: 10px;}
 .comm_write_con .comm_write_box .cont_box .address .address_box{display: flex; flex-wrap: wrap;}
 .comm_write_con .comm_write_box .cont_box .address .address_box button{height: 48px; border-radius: 6px; margin-left: 10px; border: 1px solid #000; background: #fff;}
-.comm_write_con .comm_write_box .cont_box .note-editor{width: 100%;}
+.comm_write_con .comm_write_box .cont_box .note-editor{width: 100%; overflow: hidden;}
 .comm_write_btn_wrap{position: relative; width: 100%; margin-top: 50px; display: flex; justify-content: center;}
 .comm_write_btn_wrap button{width: 200px; height: 60px; border-radius: 6px; font-size: 16px; font-weight: 600;}
 .comm_write_btn_wrap button:nth-child(even){margin-left: 20px;}
@@ -325,7 +325,8 @@ input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 
     .comm_write_con .comm_write_box .cont_box.tel select,
     .comm_write_con .comm_write_box .cont_box.tel input{width: 30%;}
     .comm_write_con .comm_write_box .cont_box.tel span{width: auto;}
-
+    .comm_write_con .comm_write_box .cont_box.period input{width: calc(50% -10px);}
+    .comm_write_con .comm_write_box .cont_box.period span{width: auto; margin-left: 5px; margin-right: 5px;}
     .comm_write_con .comm_write_box .cont_box .state {width: auto;}
 }
 
