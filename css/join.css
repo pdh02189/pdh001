@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.join_box,
+.join_box form{position: relative; width: 100%;}
+
+.basic_info{position: relative; width: 100%;}
+
+.join_tit{width: 100%; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px;}
+.join_tit h4{font-size: 20px; font-weight: 700;}
+.join_tit p{font-size: 14px; display: flex; align-items: center;}
+.join_tit p::before {content: '';display: block;width: 4px;height: 4px;float: left;margin-right: 6px;background-color: #ff3d44 ;}
+
+
+.check_info{position: relative; width: 100%; margin-top: 50px;}
+
+.joinbtn{position: relative; width: 100%; margin-top: 50px; display: flex; justify-content: center;}
+.joinbtn button {width: 200px; height: 60px; border-radius: 6px; font-size: 16px; font-weight: 600;}
+
+.check_info .comm_write_box{padding: 28px 0;}
+.check_info .comm_write_box label{position: relative; display: flex; align-items: center;}
+.check_info .comm_write_box label input[type="checkbox"]{background: url(../images/ic_check_0ff.png) center no-repeat; width: 50px; height: 20px; background-size: 16px 13px; border: none; transition: all .2s;}
+.check_info .comm_write_box label input[type="checkbox"]:checked{background: url(../images/ic_check_0n.png) center no-repeat;}
+.check_info .comm_write_box:first-child label span{font-size: 18px;}
+.check_info .comm_write_box label span{font-size: 16px; font-weight: 500;}
+.check_info .comm_write_box .arrow_btn{width: 50px; height: 20px; display: flex; align-items: center; justify-content: center; margin-left: auto; transition: all .2s;}
+.check_info .comm_write_box.on .arrow_btn{transform: rotate(-180deg);}
+
+.terms_cont{position: relative;width: 100%; height: 0px;border-radius: 6px;background: #fafafa;overflow-x: hidden;overflow-y: auto;}
+.on .terms_cont{height: 200px; padding: 30px;margin-top: 28px;}
+.terms_cont p{font-size: 14px; color: #777;}
+
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .join_tit{margin-bottom: 15px;}
+    .join_tit h4{font-size: 18px;}
+
+    .check_info .comm_write_box:first-child label span{font-size: 16px;}
+    .check_info .comm_write_box label span{font-size: 15px;}
+
+    .check_info{margin-top: 30px;}
+    .check_info .comm_write_box{padding: 24px 0;}
+    .on .terms_cont{padding: 20px;}
+}
+
+

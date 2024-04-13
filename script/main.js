@@ -61,6 +61,12 @@ $(function() {
       $('.share_popup').css('display','none');
     });
 
+    // 회원가입 약관 펼침
+    $(".check_info .arrow_btn").on("click", function() {
+      $(this).parent().toggleClass("on");
+  });
+
+
     //탭1
     const tabs1 = document.querySelectorAll(".tab1");
     const tabContent1 = document.querySelectorAll(".tab_content1");
