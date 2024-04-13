@@ -41,6 +41,9 @@
     .check_info{margin-top: 30px;}
     .check_info .comm_write_box{padding: 24px 0;}
     .on .terms_cont{padding: 20px;}
+
+    .joinbtn{margin-top: 30px;}
+    .joinbtn button{width: 120px; height: 42px; font-size: 16px;}
 }
 
 
