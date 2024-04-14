@@ -44,6 +44,25 @@
 .steps .step_img img{width: 100%;}
 
 
+/* 작성 */
+.comm_write_con .comm_write_box .cont_box.recipe_info{flex-wrap: nowrap;}
+.comm_write_con .comm_write_box .cont_box .ingredient_list{position: relative; width: 100%;}
+.comm_write_con .comm_write_box .cont_box .ingredient_list li{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: nowrap;}
+.comm_write_con .comm_write_box .cont_box .ingredient_list li:not(:first-child){margin-top: 10px;}
+.comm_write_con .comm_write_box .cont_box .ingredient_list li :not(:first-child){margin-left: 10px;}
+.comm_write_con .comm_write_box .cont_box .ingredient_list li .btn_list_del{width: 48px; height: 48px; border-radius: 6px; border: 1px solid #000; background: url(../images/ic_list_del.png) center no-repeat;}
+.comm_write_con .comm_write_box .cont_box .btn_list_plus{margin-top: 15px; font-size: 16px; font-weight: 600; background: #fff; display: flex; align-items: center;}
+.comm_write_con .comm_write_box .cont_box .btn_list_plus::before{content: ''; display: flex; width: 16px; height: 16px; background: url(../images/ic_list_plus.png) center no-repeat; margin-right: 10px;}
+
+.comm_write_con .comm_write_box .cont_box .recipe_step{position: relative; width: 100%;}
+.comm_write_con .comm_write_box .cont_box .recipe_step li{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: wrap;}
+.comm_write_con .comm_write_box .cont_box .recipe_step li textarea{width: calc(100% - 130px);}
+.comm_write_con .comm_write_box .cont_box .recipe_step li .imgBox{margin-left: 10px;}
+
+.comm_write_con .comm_write_box .cont_box .btn_step_plus{margin-top: 15px; font-size: 16px; font-weight: 600; background: #fff; display: flex; align-items: center;}
+.comm_write_con .comm_write_box .cont_box .btn_step_plus::before{content: ''; display: flex; width: 16px; height: 16px; background: url(../images/ic_list_plus.png) center no-repeat; margin-right: 10px;}
+
+
 
 /* 미디어쿼리 900 */
 @media (max-width: 900px){
@@ -54,6 +73,10 @@
     .steps .step_txt span{font-size: 22px;}
     .steps .step_txt p{font-size: 16px;}
     .steps .step_img{width: 220px;}
+
+    .comm_write_con .comm_write_box .cont_box.recipe_info select{width: calc(100%/3 - 20px/3);}
+    .comm_write_con .comm_write_box .cont_box .ingredient_list li input:nth-child(1){width: calc(65% - 68px/2);}
+    .comm_write_con .comm_write_box .cont_box .ingredient_list li input:nth-child(2){width: calc(35% - 68px/2);}
 }
 
 /* 미디어쿼리 750 */
@@ -81,4 +104,18 @@
     .steps .step_txt{width: 100%; margin: 0;}
     .steps .step_txt p{margin-top: 8px;}
     .steps .step_img{width: 100%; margin-top: 15px;}
+
+    .comm_write_con .comm_write_box .cont_box.recipe_info{flex-wrap: wrap;}
+    .comm_write_con .comm_write_box .cont_box.recipe_info select{width: 100% !important;}
+    .comm_write_con .comm_write_box .cont_box.recipe_info select:not(:first-child){margin-left: 0; margin-top: 10px;}
+    .comm_write_con .comm_write_box .cont_box .ingredient_list li input:nth-child(1){width: calc(62% - 40px/2);}
+    .comm_write_con .comm_write_box .cont_box .ingredient_list li input:nth-child(2){width: calc(38% - 40px/2);}
+    .comm_write_con .comm_write_box .cont_box .ingredient_list li .btn_list_del{border: none; width: 20px; height: 20px;}
+    .comm_write_con .comm_write_box .cont_box .btn_list_plus,
+    .comm_write_con .comm_write_box .cont_box .btn_step_plus{font-size: 15px;}
+
+    .comm_write_con .comm_write_box .cont_box .recipe_step li textarea{width: calc(100% - 100px); height: 90px;}
+    .comm_write_box .cont_box .recipe_step .imgBox,
+    .comm_write_box .cont_box .recipe_step .imgBox label{width: 90px !important; height: 90px; font-size: 14px;}
+    .comm_write_box .cont_box .recipe_step .imgBox label img{width: 36px;}
 }
