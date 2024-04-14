@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+/* 회원탈퇴 팝업 */
+.withdrawal_popup{width: 100%; max-width: 600px;}
+.withdrawal_popup p{font-size: 16px; margin-bottom: 20px;}
+.withdrawal_popup .withdrawal_check{width: 100%; display: flex; flex-wrap: wrap; align-items: center;}
+.withdrawal_popup .withdrawal_check label{font-size: 15px;}
+.withdrawal_popup .withdrawal_btn_wrap {width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 30px;}
+.withdrawal_popup .withdrawal_btn_wrap button{width: 160px; height: 48px; font-size: 16px; font-weight: 600; border-radius: 6px;}
+.withdrawal_popup .withdrawal_btn_wrap button:last-child{margin-left: 20px;}
+
+.myinfo_box,
+.myinfo_box form,
+.my_comm_list{position: relative; width: 100%;}
+
+.basic_info{position: relative; width: 100%;}
+
+.myinfo_tit{width: 100%; display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px;}
+.myinfo_tit h4{font-size: 20px; font-weight: 700;}
+.myinfo_tit p{font-size: 14px; display: flex; align-items: center;}
+.myinfo_tit p::before {content: '';display: block;width: 4px;height: 4px;float: left;margin-right: 6px;background-color: #ff3d44 ;}
+
+
+.myinfobtn{position: relative; width: 100%; margin-top: 50px; display: flex; align-items: center; flex-direction: column;}
+.myinfobtn button {width: 200px; height: 60px; border-radius: 6px; font-size: 16px; font-weight: 600;}
+.myinfobtn .btn_withdrawal{margin-top: 25px; text-decoration: underline;}
+
+
+
+.my_comm_list.comm_list li{width: calc(100%/3 - 40px/3);}
+.my_comm_list.comm_list li:nth-child(-n + 4){margin-top: 60px;}
+.my_comm_list.comm_list li:nth-child(4n){margin-right: 20px;}
+.my_comm_list.comm_list li:nth-child(-n + 3){margin-top: 0px;}
+.my_comm_list.comm_list li:nth-child(3n){margin-right: 0px;}
+
+
+.btn_del_heart {position: absolute; right: 0;bottom: 0; z-index: 1; display: flex;align-items: center;justify-content: center;width: 60px;height: 30px;border-radius: 5px;font-size: 12px;font-weight: 600;background-color: #fff;line-height: 1em;}
+.btn_del_heart::before {content: '';display: flex;clear: both;width: 10px;height: 10px;background: url(../images/ic_red_close.png) center no-repeat;margin-right: 5px;}
+
+/* 미디어쿼리 600 */
+@media (max-width: 600px){
+    .withdrawal_popup .withdrawal_btn_wrap button{width: calc(50% - 5px); height: 42px; font-size: 15px;}
+    .withdrawal_popup .withdrawal_btn_wrap button:last-child{margin-left: 10px;}
+
+    .myinfo_tit{margin-bottom: 15px;}
+    .myinfo_tit h4{font-size: 18px;}
+
+
+    .myinfobtn{margin-top: 30px;}
+    .myinfobtn button{width: 120px; height: 42px; font-size: 16px;}
+
+
+    .my_comm_list.comm_list li{width: calc(100%/2 - 20px/2); margin-top: 40px !important;}
+    .my_comm_list.comm_list li:nth-child(-n + 3){margin-top: 40px;}
+    .my_comm_list.comm_list li:nth-child(3n){margin-right: 20px;}
+    .my_comm_list.comm_list li:nth-child(-n + 2){margin-top: 0px !important;}
+    .my_comm_list.comm_list li:nth-child(2n){margin-right: 0px;}
+}
+
+
+/* 미디어쿼리 450 */
+@media (max-width: 450px){
+    .btn_del_heart{position: relative; right: auto; bottom: auto; margin-left: auto; margin-top: 5px;}
+}
