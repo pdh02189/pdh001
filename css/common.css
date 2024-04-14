@@ -23,7 +23,12 @@ select{-webkit-appearance: none;-moz-appearance: none;appearance: none; padding-
 /* date */
 input[type=date]::after{content: ''; position: absolute; top: 50%; right: 15px; transform: translateY(-50%); display: flex; width: 18px; height: 18px; background: url(../images/ic_date.png) center no-repeat;}
 input[type='date']::-webkit-calendar-picker-indicator {position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: transparent;color: transparent;cursor: pointer;}
-  
+
+/* number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+input[type=number] {-moz-appearance: textfield;}
+
 /* common */
 .btn_red{background: #f95353; color: #fff;}
 .btn_red2{background: #fff; border: 1px solid #f95353; color: #f95353;}

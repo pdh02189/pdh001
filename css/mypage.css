@@ -11,7 +11,8 @@
 
 .myinfo_box,
 .myinfo_box form,
-.my_comm_list{position: relative; width: 100%;}
+.my_comm_list,
+.cart_list{position: relative; width: 100%;}
 
 .basic_info{position: relative; width: 100%;}
 
@@ -37,6 +38,76 @@
 .btn_del_heart {position: absolute; right: 0;bottom: 0; z-index: 1; display: flex;align-items: center;justify-content: center;width: 60px;height: 30px;border-radius: 5px;font-size: 12px;font-weight: 600;background-color: #fff;line-height: 1em;}
 .btn_del_heart::before {content: '';display: flex;clear: both;width: 10px;height: 10px;background: url(../images/ic_red_close.png) center no-repeat;margin-right: 5px;}
 
+
+.my_review_list{position: relative; width: 100%;}
+.my_review_list li{position: relative; display: flex; flex-wrap: wrap; width: 100%;border-bottom: 1px solid #e2e5eb;}
+
+.my_review_list li:first-child{border-top: 1px solid #e2e5eb;}
+
+.my_review_list li .review_star{width: 100%; display: flex; margin-bottom: 5px;}
+.my_review_list li .review_star .review_star_bg{display: inline-block; background: url(../images/ic_star_off.png) 1px center no-repeat; background-size: 90px; width: 87px;}
+.my_review_list li .review_star .review_star_bg .review_star_on{background: url(../images/ic_star_on.png) 1px center no-repeat; background-size: 90px; height: 100%; display: block;}
+.my_review_list li .review_star .review_score{margin-left: 5px; font-size: 14px;}
+.my_review_list li h5{width: 100%; margin-top: 10px; font-size: 16px;}
+
+.my_review_list li .review_top{width: 100%; padding: 10px; background: #f8f8f8; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;} 
+.my_review_list li .review_top > a{display: flex; align-items: center; flex-wrap: wrap;}
+.my_review_list li .review_top > a .thumb_img{position: relative; width: 40px; height: 40px; overflow: hidden; margin-right: 10px;}
+.my_review_list li .review_top > a .thumb_img img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;margin: auto;}
+.my_review_list li .review_top > a p{font-size: 16px; font-weight: 500;}
+
+.my_review_list li .review_top .info01{width: auto;}
+.my_review_list li .review_bottom{position: relative; display: flex; flex-wrap: wrap; width: 100%; padding: 20px 0;}
+
+.my_review_list li .review_txt{width: calc(100% - 120px);}
+.my_review_list li.noimg .review_txt{width: 100%;}
+.my_review_list li .review_img{position: relative; width: 100px; height: 100px;margin-left: 20px; border: 1px solid #e2e5eb; border-radius: 6px; overflow: hidden;}
+.my_review_list li.noimg .review_img{display: none;}
+.my_review_list li .review_img img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;margin: auto;}
+
+
+.cart_top{position: relative; width: 100%; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 10px;}
+.cart_top label{display: flex; align-items: center;}
+.cart_top label span{font-size: 15px; margin-left: 8px;}
+.cart_top .btn_del{width: 70px; height: 30px; border-radius: 5px; font-size: 12px; font-weight: 600;}
+
+.cart_list ul{position: relative; width: 100%; border-top: 1px solid #e2e5eb;}
+.cart_list ul li{position: relative; width: 100%; padding: 20px 0; display: flex; flex-wrap: wrap; align-items: center; border-bottom: 1px solid #e2e5eb;}
+.cart_list ul li label{margin-right: 20px;}
+.cart_list ul li > a{width: calc(100% - 357px); display: flex; align-items: center; flex-wrap: wrap;}
+.cart_list ul li > a .thumb_img{position: relative; width: 80px; height: 80px; overflow: hidden; margin-right: 20px;}
+.cart_list ul li > a .thumb_img img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;object-fit: cover;margin: auto;}
+.cart_list ul li > a p{width: calc(100% - 100px); font-size: 16px; font-weight: 500;}
+.cart_list ul li .item_qty{position: relative; display: flex; align-items: center; margin-left: 20px; width: 117px; height: 42px; border-radius: 3px; border: 1px solid #e2e5eb; overflow: hidden;}
+.cart_list ul li .item_qty .item_qty_count{border: 0; width: 115px; padding: 0 40px;font-size: 15px;line-height: 40px;text-align: center;;overflow: hidden;}
+.cart_list ul li .item_qty button{position: absolute; top: 0;}
+.cart_list ul li .item_qty .minus{width: 40px; height: 40px; background: url(../images/ic_minus.png) center no-repeat; left: 0;}
+.cart_list ul li .item_qty .plus{width: 40px; height: 40px; background: url(../images/ic_plus.png) center no-repeat; right: 0;}
+.cart_list ul li .item_price{width: 170px; display: flex; flex-direction: column; align-items: center;}
+.cart_list ul li .item_price p{font-size: 18px; font-weight: 800;}
+.cart_list ul li .item_price span{font-size: 14px; margin-top: 4px;}
+.cart_list ul li .btn_cart_del{width: 14px; height: 14px; background: url(../images/ic_popup_close.png) center no-repeat #fff; border: none;}
+
+.cart_list .cart_total{position: relative; width: 100%; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; background: #f8f8f8; padding: 30px 60px;}
+.cart_list .cart_total > div{display: flex; flex-direction: column; align-items: center;}
+.cart_list .cart_total > span{font-size: 22px; font-weight: 700;}
+.cart_list .cart_total > div span{font-size: 16px;}
+.cart_list .cart_total > div strong{font-size: 22px; font-weight: 700; margin-top: 10px;}
+.cart_list .cart_total > div.total_price strong{font-size: 26px;}
+
+.cart_btn_wrap {width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 40px;}
+.cart_btn_wrap button{width: 200px; height: 60px; font-size: 16px; font-weight: 600; border-radius: 6px;}
+.cart_btn_wrap button:last-child{margin-left: 20px;}
+
+/* 미디어쿼리 750 */
+@media (max-width: 750px){
+    .cart_list ul li{align-items: flex-start;}
+    .cart_list ul li > a{width: calc(100% - 70px);}
+    .cart_list ul li .item_qty{margin-top: 15px; margin-left: 36px; order: 1; align-self: flex-end;}
+    .cart_list ul li .item_price{margin-top: 15px; order: 1; margin-left: auto; align-self: flex-end; width: auto;;} 
+    .cart_list ul li .btn_cart_del{margin-left: 20px; order: 0;}
+}
+
 /* 미디어쿼리 600 */
 @media (max-width: 600px){
     .withdrawal_popup .withdrawal_btn_wrap button{width: calc(50% - 5px); height: 42px; font-size: 15px;}
@@ -55,10 +126,38 @@
     .my_comm_list.comm_list li:nth-child(3n){margin-right: 20px;}
     .my_comm_list.comm_list li:nth-child(-n + 2){margin-top: 0px !important;}
     .my_comm_list.comm_list li:nth-child(2n){margin-right: 0px;}
+
+    .my_review_list li .review_txt{width: calc(100% - 100px);}
+    .my_review_list li .review_img{width: 80px; height: 80px;}
+
+    .my_review_list li .review_top > a{width: 100%;}
+    .my_review_list li .review_top > a p{width: calc(100% - 50px);}
+    .my_review_list li .review_top .info01{width: 100%; justify-content: flex-end;}
+
+    .cart_list ul li > a .thumb_img{width: 50px; height: 50px; margin-right: 15px;}
+    .cart_list ul li > a p{width: calc(100% - 70px); font-size: 15px;}
+    .cart_list ul li .item_qty{width: 92px; height: 34px;}
+    .cart_list ul li .item_qty .item_qty_count{width: 90px; height: 32px; padding: 0 32px;}
+    .cart_list ul li .item_qty button{width: 32px !important; height: 32px !important; background-size: 30px !important;}
+
+    .cart_list .cart_total{padding: 20px;}
+    .cart_list .cart_total > div{width: 100%; flex-direction: row; justify-content: space-between;}
+    .cart_list .cart_total > div:not(:first-child){margin-top: 15px;}
+    .cart_list .cart_total > span{display: none;}
+    .cart_list .cart_total > div span{font-size: 14px;}
+    .cart_list .cart_total > div strong{font-size: 16px; margin-top: 0;}
+    .cart_list .cart_total > div.total_price strong{font-size: 18px;}
+
+    .cart_btn_wrap{margin-top: 30px;}
+    .cart_btn_wrap button{width: 120px; height: 42px; font-size: 15px;}
+    .cart_btn_wrap button:last-child{margin-left: 10px;}
 }
 
 
 /* 미디어쿼리 450 */
 @media (max-width: 450px){
     .btn_del_heart{position: relative; right: auto; bottom: auto; margin-left: auto; margin-top: 5px;}
+
+    .my_review_list li .review_txt{width: 100%;}
+    .my_review_list li .review_img{margin-left: 0; margin-top: 15px;}
 }
